@@ -1,0 +1,8302 @@
+[
+  {
+    "sample_id": 0,
+    "file": "data/fea_training_data/sample_0000.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 9345.24336180697,
+    "load_x_px": 342.5150451660156,
+    "load_y_px": 283.0582275390625,
+    "load_x_pos": 5.5229551297966,
+    "load_y_pos": 50.74810626657304,
+    "solver_frd": "data/fea_training_data/case_0000.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        3378442.4327000156
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        3296462.0762112965
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        3296462.0762112965
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        3200444.49536248
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        3112287.31069341
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        3112287.31069341
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        3074898.5544421333
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        3074463.8495829143
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        2666957.102596703
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        2666957.102596703
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~1351296% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 1,
+    "file": "data/fea_training_data/sample_0001.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 5292.33855618816,
+    "load_x_px": 191.69537353515625,
+    "load_y_px": 345.9029235839844,
+    "load_x_pos": -23.548934504599433,
+    "load_y_pos": 166.47582144574832,
+    "solver_frd": "data/fea_training_data/case_0001.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        312292273.84665525
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        310821794.6031196
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        237039525.83019164
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        208415708.211566
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        168788481.76647097
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        168788481.76647097
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        168226266.45931286
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        163789784.30052793
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        153240439.60820347
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        151189212.9259012
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~124916829% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 2,
+    "file": "data/fea_training_data/sample_0002.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 8445.010846179095,
+    "load_x_px": 224.81552124023438,
+    "load_y_px": 411.9250183105469,
+    "load_x_pos": -17.164720580923273,
+    "load_y_pos": 288.0546455593223,
+    "solver_frd": "data/fea_training_data/case_0002.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        626433686.4313139
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        623375573.1258619
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        544540761.5000277
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        472564254.9551982
+      ],
+      [
+        -49.2179,
+        416.258,
+        -24.5,
+        442929896.5305725
+      ],
+      [
+        -49.2678,
+        415.26,
+        -21.5,
+        442929896.5305725
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        426596820.6032539
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        426596820.6032539
+      ],
+      [
+        -49.2678,
+        415.26,
+        -24.5,
+        393229072.2908608
+      ],
+      [
+        -49.2179,
+        416.258,
+        -21.5,
+        393229072.2908608
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~250573394% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 3,
+    "file": "data/fea_training_data/sample_0003.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 8297.279716441893,
+    "load_x_px": 329.22216796875,
+    "load_y_px": 312.5173645019531,
+    "load_x_pos": 2.960632447195181,
+    "load_y_pos": 104.99676756950343,
+    "solver_frd": "data/fea_training_data/case_0003.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        2999604.2986865784
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        2926798.2708595903
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        2926798.2708595903
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        2841535.6771737
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        2763271.9793485375
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        2763271.9793485375
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        2730097.1966867186
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        2729680.3720712415
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        2367892.1101828287
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        2367892.1101828287
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~1199761% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 4,
+    "file": "data/fea_training_data/sample_0004.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 2442.4738548386767,
+    "load_x_px": 268.451904296875,
+    "load_y_px": 283.7169189453125,
+    "load_x_pos": -8.75339593785872,
+    "load_y_pos": 51.9610307742113,
+    "solver_frd": "data/fea_training_data/case_0004.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        882995.7185003787
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        861563.5629331544
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        861563.5629331544
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        836466.4391498322
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        813426.4418459038
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        813426.4418459038
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        803659.0893228234
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        803539.977750566
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        697042.8372293916
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        697042.8372293916
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~353118% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 5,
+    "file": "data/fea_training_data/sample_0005.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 4384.085389499116,
+    "load_x_px": 219.58029174804688,
+    "load_y_px": 405.8365783691406,
+    "load_x_pos": -18.173859861553098,
+    "load_y_pos": 276.84290919958676,
+    "solver_frd": "data/fea_training_data/case_0005.frd",
+    "fracture_points": [
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        148086589.6061624
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        147681056.95354995
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        147681056.95354995
+      ],
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        139761827.228636
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        128890656.68294191
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        127507653.52874184
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        127164473.10907991
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        123169964.80823399
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        122960014.88967541
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        122514416.97502503
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.0, Y:415.9) by ~59234555% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 6,
+    "file": "data/fea_training_data/sample_0006.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 4677.238487767141,
+    "load_x_px": 53.385414123535156,
+    "load_y_px": 368.21533203125,
+    "load_x_pos": -50.20946424115812,
+    "load_y_pos": 207.56382523899376,
+    "solver_frd": "data/fea_training_data/case_0006.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        573896788.343035
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        571679916.8948011
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        511298044.3247094
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        443386291.2708499
+      ],
+      [
+        -49.2179,
+        416.258,
+        -24.5,
+        436157283.09113264
+      ],
+      [
+        -49.2678,
+        415.26,
+        -21.5,
+        436157283.09113264
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        405861502.1769936
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        405861502.1769936
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        403589936.6870044
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        402900164.8157393
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~229558635% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 7,
+    "file": "data/fea_training_data/sample_0007.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 4521.112481419832,
+    "load_x_px": 373.7868957519531,
+    "load_y_px": 257.3834533691406,
+    "load_x_pos": 11.550894698999151,
+    "load_y_pos": 3.4683609373652335,
+    "solver_frd": "data/fea_training_data/case_0007.frd",
+    "fracture_points": [
+      [
+        24.5,
+        415.405,
+        21.9631,
+        1959344.3786816227
+      ],
+      [
+        24.5,
+        416.516,
+        22.3479,
+        1852571.530640855
+      ],
+      [
+        24.5,
+        416.394,
+        21.8141,
+        1814748.6619804134
+      ],
+      [
+        24.5,
+        -408.375,
+        21.553,
+        1730498.7858143612
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        1714800.7247788298
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        1690692.0199868514
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        1647437.5099137297
+      ],
+      [
+        21.5,
+        -408.397,
+        21.8387,
+        1579731.8413954978
+      ],
+      [
+        21.5,
+        -407.402,
+        21.9384,
+        1486366.4685381462
+      ],
+      [
+        24.5,
+        -407.377,
+        21.6028,
+        1484878.7393585024
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:415.4) by ~783657% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 8,
+    "file": "data/fea_training_data/sample_0008.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 3333.878502512077,
+    "load_x_px": 414.4266662597656,
+    "load_y_px": 295.3407897949219,
+    "load_x_pos": 19.384590023941897,
+    "load_y_pos": 73.36632546938775,
+    "solver_frd": "data/fea_training_data/case_0008.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        1205242.6217421952
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        1175998.933327285
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        1175998.933327285
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        1141738.9995020754
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        1110298.7427434344
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        1110298.7427434344
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        1096957.9444326342
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        1096802.1235607998
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        951430.8161446948
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        951430.8161446948
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~482017% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 9,
+    "file": "data/fea_training_data/sample_0009.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 2825.428044358378,
+    "load_x_px": 323.8951110839844,
+    "load_y_px": 258.4123840332031,
+    "load_x_pos": 1.9337918319558725,
+    "load_y_pos": 5.363151519582767,
+    "solver_frd": "data/fea_training_data/case_0009.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        1021441.2682342534
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        996648.6112154482
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        996648.6112154482
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        967611.8192273232
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        940959.2513802418
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        940959.2513802418
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        929659.5089368419
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        929526.3665010692
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        806327.5929106172
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        806327.5929106172
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~408496% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 10,
+    "file": "data/fea_training_data/sample_0010.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 9179.68894859993,
+    "load_x_px": 93.46205139160156,
+    "load_y_px": 452.24151611328125,
+    "load_x_pos": -42.484320889166966,
+    "load_y_pos": 362.2970358669083,
+    "solver_frd": "data/fea_training_data/case_0010.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        541678545.1884068
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        539128102.6182953
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        411150847.92079157
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        361501111.71164715
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        292767514.07913464
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        292767514.07913464
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        291792716.36340976
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        284097479.0713948
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        265798416.95605344
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        262240807.35971108
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~216671338% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 11,
+    "file": "data/fea_training_data/sample_0011.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 6737.817697579924,
+    "load_x_px": 84.2370376586914,
+    "load_y_px": 290.2471008300781,
+    "load_x_pos": -44.262526018589455,
+    "load_y_pos": 63.986326162001674,
+    "solver_frd": "data/fea_training_data/case_0011.frd",
+    "fracture_points": [
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        229103075.11675352
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        214029383.74249434
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        213664803.92221832
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        212609687.1018214
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        212017045.44612697
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        211947786.01514006
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        189821060.8819497
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        189821060.8819497
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        186952763.5847024
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        129985022.5522583
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.2, Y:415.4) by ~91641150% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 12,
+    "file": "data/fea_training_data/sample_0012.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 9436.741231543223,
+    "load_x_px": 271.9143981933594,
+    "load_y_px": 271.6504821777344,
+    "load_x_pos": -8.085968353468658,
+    "load_y_pos": 29.74094371609384,
+    "solver_frd": "data/fea_training_data/case_0012.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        3411529.1126037603
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        3328731.189620079
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        3328731.189620079
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        3231804.2082032138
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        3142751.6201580176
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        3142751.6201580176
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        3104989.3540115
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        3104564.8979744795
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        2693071.571014081
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        2693071.571014081
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~1364531% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 13,
+    "file": "data/fea_training_data/sample_0013.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 4986.322033424588,
+    "load_x_px": 74.73480987548828,
+    "load_y_px": 320.8019104003906,
+    "load_x_pos": -46.09416812760637,
+    "load_y_pos": 120.25266517456306,
+    "solver_frd": "data/fea_training_data/case_0013.frd",
+    "fracture_points": [
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        169547904.93106276
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        158391838.85908896
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        158122231.76650992
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        157341986.00973487
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        156902816.3225175
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        156852629.54220244
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        140477285.21139023
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        140477285.21139023
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        138353810.46683887
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        96195708.2351167
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.2, Y:415.4) by ~67819081% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 14,
+    "file": "data/fea_training_data/sample_0014.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 8602.170899845882,
+    "load_x_px": 243.26644897460938,
+    "load_y_px": 260.72271728515625,
+    "load_x_pos": -13.608132031591111,
+    "load_y_pos": 9.617590484821811,
+    "solver_frd": "data/fea_training_data/case_0014.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        507600203.7037266
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        505210074.3132616
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        385283801.62325317
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        338758597.7505314
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        274349401.47349966
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        274349401.47349966
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        273435420.6084316
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        266224586.39411378
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        249076591.26570606
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        245741873.3354395
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~203040001% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 15,
+    "file": "data/fea_training_data/sample_0015.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 2027.7418725875807,
+    "load_x_px": 73.95591735839844,
+    "load_y_px": 349.201416015625,
+    "load_x_pos": -46.24430977687382,
+    "load_y_pos": 172.54997018250896,
+    "solver_frd": "data/fea_training_data/case_0015.frd",
+    "fracture_points": [
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        68948570.15861577
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        64411872.111084975
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        64302048.417933084
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        63984902.84167508
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        63806285.607198514
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        63785741.0675724
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        57126591.04661134
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        57126591.04661134
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        56263153.017720826
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        39119030.80974188
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.2, Y:415.4) by ~27579348% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 16,
+    "file": "data/fea_training_data/sample_0016.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 2945.7118070802785,
+    "load_x_px": 144.8623504638672,
+    "load_y_px": 347.32159423828125,
+    "load_x_pos": -32.576435627253545,
+    "load_y_pos": 169.08831047234062,
+    "solver_frd": "data/fea_training_data/case_0016.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        98520333.6346491
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        98510566.76875776
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        60136354.42678506
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        59667359.23409649
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        49863523.13618231
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        49635637.033564575
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        48543694.57341248
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        47676048.788708396
+      ],
+      [
+        -49.2678,
+        415.26,
+        -24.5,
+        40556025.984583735
+      ],
+      [
+        -49.2179,
+        416.258,
+        -21.5,
+        40556025.984583735
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~39408053% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 17,
+    "file": "data/fea_training_data/sample_0017.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 6054.5773430688605,
+    "load_x_px": 270.1671447753906,
+    "load_y_px": 337.3155517578125,
+    "load_x_pos": -8.42276679664397,
+    "load_y_pos": 150.66231330489148,
+    "solver_frd": "data/fea_training_data/case_0017.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        2188839.830721289
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        2135699.786061353
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        2135699.786061353
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        2073476.3824924557
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        2016375.7582355083
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        2016375.7582355083
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        1992160.3254904638
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        1991858.3025129247
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        1727867.9625924227
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        1727867.9625924227
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~875455% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 18,
+    "file": "data/fea_training_data/sample_0018.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 3408.7116331651714,
+    "load_x_px": 406.6648864746094,
+    "load_y_px": 276.6460876464844,
+    "load_x_pos": 17.888436006888128,
+    "load_y_pos": 38.94024919358073,
+    "solver_frd": "data/fea_training_data/case_0018.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        1232311.9416645283
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        1202396.251310677
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        1202396.251310677
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        1167360.1399041342
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        1135219.180222741
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        1135219.180222741
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        1121590.317591887
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        1121409.7743635552
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        972783.9155566205
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        972783.9155566205
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~492844% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 19,
+    "file": "data/fea_training_data/sample_0019.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 9148.745980495922,
+    "load_x_px": 299.5755615234375,
+    "load_y_px": 396.46044921875,
+    "load_x_pos": -2.754029593748051,
+    "load_y_pos": 259.5768542724927,
+    "solver_frd": "data/fea_training_data/case_0019.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        3307441.7480951953
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        3227145.8454268663
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        3227145.8454268663
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        3133167.0697749266
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        3046842.412465945
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        3046842.412465945
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        3010218.11240682
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        3009754.848679181
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        2610878.042887582
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        2610878.042887582
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~1322896% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 20,
+    "file": "data/fea_training_data/sample_0020.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 8225.705017900036,
+    "load_x_px": 81.96541595458984,
+    "load_y_px": 303.794921875,
+    "load_x_pos": -44.70040525085969,
+    "load_y_pos": 88.93451365812939,
+    "solver_frd": "data/fea_training_data/case_0020.frd",
+    "fracture_points": [
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        279695385.102948
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        261291687.0097208
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        260846428.4544159
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        259560454.98489094
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        258835873.57126763
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        258752858.41019246
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        231738912.39569858
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        231738912.39569858
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        228236082.51521018
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        158689603.6033306
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.2, Y:415.4) by ~111878074% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 21,
+    "file": "data/fea_training_data/sample_0021.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 9280.5431890257,
+    "load_x_px": 194.2042999267578,
+    "load_y_px": 356.0908203125,
+    "load_x_pos": -23.065314185619478,
+    "load_y_pos": 185.2367271927571,
+    "solver_frd": "data/fea_training_data/case_0021.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        547628889.6737269
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        545050857.7197664
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        415667341.0748597
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        365473407.0656864
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        295984975.42608863
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        295984975.42608863
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        294998614.2122479
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        287218711.56048024
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        268718641.9917365
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        265121836.8667568
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~219051475% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 22,
+    "file": "data/fea_training_data/sample_0022.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 6225.565842074172,
+    "load_x_px": 319.1870422363281,
+    "load_y_px": 440.692138671875,
+    "load_x_pos": 1.026269683481594,
+    "load_y_pos": 341.0288928653827,
+    "solver_frd": "data/fea_training_data/case_0022.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        2250642.5262057944
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        2196018.993290431
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        2196018.993290431
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        2132073.023476682
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        2073326.119162399
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        2073326.119162399
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        2048405.0615588094
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        2048126.2772896574
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        1776676.8370580764
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        1776676.8370580764
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~900177% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 23,
+    "file": "data/fea_training_data/sample_0023.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 6680.167649351127,
+    "load_x_px": 421.0789489746094,
+    "load_y_px": 287.9862060546875,
+    "load_x_pos": 20.666883623777338,
+    "load_y_pos": 59.82292827854883,
+    "solver_frd": "data/fea_training_data/case_0023.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        2414981.5007815277
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        2356379.433496861
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        2356379.433496861
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        2287735.946416675
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        2224718.759872625
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        2224718.759872625
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        2198003.4230861035
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        2197675.344472363
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        1906396.2732698047
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        1906396.2732698047
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~965912% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 24,
+    "file": "data/fea_training_data/sample_0024.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 3952.646128224961,
+    "load_x_px": 179.68797302246094,
+    "load_y_px": 353.95709228515625,
+    "load_x_pos": -25.86347394120917,
+    "load_y_pos": 181.3074969761075,
+    "solver_frd": "data/fea_training_data/case_0024.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        233238822.53834927
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        232140522.63553056
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        177035713.92558634
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        155657572.5405788
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        126061667.71889026
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        126061667.71889026
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        125641907.1798195
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        122328296.19435291
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        114449090.03591403
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        112917202.67919138
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~93295449% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 25,
+    "file": "data/fea_training_data/sample_0025.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 6294.479574579023,
+    "load_x_px": 205.64491271972656,
+    "load_y_px": 317.65692138671875,
+    "load_x_pos": -20.860031194812944,
+    "load_y_pos": 114.46118828822155,
+    "solver_frd": "data/fea_training_data/case_0025.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        371426403.1280209
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        369677597.41619927
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        281924121.425768
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        247880635.57080323
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        200749853.91253763
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        200749853.91253763
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        200081521.2145787
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        194804289.1916874
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        182256942.7584719
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        179817458.88771257
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~148570481% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 26,
+    "file": "data/fea_training_data/sample_0026.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 9313.200394741954,
+    "load_x_px": 438.9736022949219,
+    "load_y_px": 303.59027099609375,
+    "load_x_pos": 24.11624359848126,
+    "load_y_pos": 88.55762110669635,
+    "solver_frd": "data/fea_training_data/case_0026.frd",
+    "fracture_points": [
+      [
+        25.0,
+        416.038,
+        20.5047,
+        2772238.440218751
+      ],
+      [
+        24.0,
+        415.992,
+        20.6536,
+        2772238.440218751
+      ],
+      [
+        24.0,
+        416.038,
+        20.5047,
+        2666762.902371797
+      ],
+      [
+        25.0,
+        415.992,
+        20.6536,
+        2666762.902371797
+      ],
+      [
+        24.5,
+        416.443,
+        20.9036,
+        1420462.0998382005
+      ],
+      [
+        21.5,
+        415.463,
+        20.7056,
+        1420462.0998382005
+      ],
+      [
+        24.5,
+        415.463,
+        20.7056,
+        1399154.5441761357
+      ],
+      [
+        21.5,
+        416.443,
+        20.9036,
+        1399154.5441761357
+      ],
+      [
+        25.0,
+        -407.992,
+        20.6536,
+        1120007.382395623
+      ],
+      [
+        24.0,
+        -407.992,
+        20.6536,
+        1053668.483621727
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:25.0, Y:416.0) by ~1108815% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 27,
+    "file": "data/fea_training_data/sample_0027.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 3764.6635558927555,
+    "load_x_px": 451.6420593261719,
+    "load_y_px": 425.6529846191406,
+    "load_x_pos": 26.558207296257862,
+    "load_y_pos": 313.3345398076447,
+    "solver_frd": "data/fea_training_data/case_0027.frd",
+    "fracture_points": [
+      [
+        25.0,
+        416.038,
+        20.5047,
+        1120615.3540232603
+      ],
+      [
+        24.0,
+        415.992,
+        20.6536,
+        1120615.3540232603
+      ],
+      [
+        24.0,
+        416.038,
+        20.5047,
+        1077983.3906728018
+      ],
+      [
+        25.0,
+        415.992,
+        20.6536,
+        1077983.3906728018
+      ],
+      [
+        24.5,
+        416.443,
+        20.9036,
+        574192.1887465119
+      ],
+      [
+        21.5,
+        415.463,
+        20.7056,
+        574192.1887465119
+      ],
+      [
+        24.5,
+        415.463,
+        20.7056,
+        565580.5046570558
+      ],
+      [
+        21.5,
+        416.443,
+        20.9036,
+        565580.5046570558
+      ],
+      [
+        25.0,
+        -407.992,
+        20.6536,
+        452738.04199826927
+      ],
+      [
+        24.0,
+        -407.992,
+        20.6536,
+        425922.9300434969
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:25.0, Y:416.0) by ~448166% to handle over-stress safely.",
+      "structural_feature": "Add a localized stiffening pad at the load contact area to distribute the applied force.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 28,
+    "file": "data/fea_training_data/sample_0028.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 7386.497106069563,
+    "load_x_px": 300.2738952636719,
+    "load_y_px": 481.83538818359375,
+    "load_x_pos": -2.619417060797943,
+    "load_y_pos": 416.7937721858394,
+    "solver_frd": "data/fea_training_data/case_0028.frd",
+    "fracture_points": [
+      [
+        24.2059,
+        -422.0,
+        7.01445,
+        219425913.3152691
+      ],
+      [
+        24.2059,
+        -423.0,
+        7.01445,
+        219231423.95206213
+      ],
+      [
+        24.0598,
+        430.0,
+        7.03247,
+        199654359.9075191
+      ],
+      [
+        24.0598,
+        431.0,
+        7.03247,
+        199589498.8363243
+      ],
+      [
+        24.2059,
+        430.0,
+        7.01445,
+        171484261.55502662
+      ],
+      [
+        24.2059,
+        431.0,
+        7.01445,
+        171342034.99704358
+      ],
+      [
+        34.5,
+        -422.0,
+        10.0,
+        169343882.73466235
+      ],
+      [
+        34.6472,
+        -422.0,
+        9.99639,
+        169343882.73466235
+      ],
+      [
+        34.5,
+        -423.0,
+        10.0,
+        169275625.1051423
+      ],
+      [
+        34.6472,
+        -423.0,
+        9.99639,
+        169275625.1051423
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.2, Y:-422.0) by ~87770285% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 29,
+    "file": "data/fea_training_data/sample_0029.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 7819.846937506463,
+    "load_x_px": 280.358154296875,
+    "load_y_px": 287.33099365234375,
+    "load_x_pos": -6.458362811551403,
+    "load_y_pos": 58.61635856960825,
+    "solver_frd": "data/fea_training_data/case_0029.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        2827016.5921382564
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        2758393.5401316485
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        2758393.5401316485
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        2678012.419465974
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        2604269.9934758465
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        2604269.9934758465
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        2573014.6513032974
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        2572608.654980153
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        2231644.0662912647
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        2231644.0662912647
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~1130726% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 30,
+    "file": "data/fea_training_data/sample_0030.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 4616.112538234081,
+    "load_x_px": 87.7034683227539,
+    "load_y_px": 350.7898864746094,
+    "load_x_pos": -43.59434179723266,
+    "load_y_pos": 175.47510978656058,
+    "solver_frd": "data/fea_training_data/case_0030.frd",
+    "fracture_points": [
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        156959865.3201754
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        146632123.35799956
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        146382551.13397816
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        145660099.33722517
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        145253576.00905922
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        145206998.38948432
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        130047114.45437133
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        130047114.45437133
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        128081674.75670469
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        89053597.57036021
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.2, Y:415.4) by ~62783866% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 31,
+    "file": "data/fea_training_data/sample_0031.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 2843.2161167590157,
+    "load_x_px": 146.14324951171875,
+    "load_y_px": 440.25958251953125,
+    "load_x_pos": -32.32952764913438,
+    "load_y_pos": 340.23239707773877,
+    "solver_frd": "data/fea_training_data/case_0031.frd",
+    "fracture_points": [
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        96038652.9017957
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        95775140.82665506
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        95775140.82665506
+      ],
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        90639969.37971404
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        83589657.84348011
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        82692734.73141572
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        82470255.42558962
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        79879485.9760283
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        79743403.41242038
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        79454331.11598007
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.0, Y:415.9) by ~38415381% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 32,
+    "file": "data/fea_training_data/sample_0032.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 3823.628974995036,
+    "load_x_px": 369.16351318359375,
+    "load_y_px": 391.0226135253906,
+    "load_x_pos": 10.659698550093836,
+    "load_y_pos": 249.56316961926228,
+    "solver_frd": "data/fea_training_data/case_0032.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        1382312.8129486465
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        1348758.8808022144
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        1348758.8808022144
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        1309465.7581254272
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        1273396.0009101313
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        1273396.0009101313
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        1258102.8695425824
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        1257916.3375962807
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        1091194.009835799
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        1091194.009835799
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~552845% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 33,
+    "file": "data/fea_training_data/sample_0033.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 4816.163398495931,
+    "load_x_px": 227.1469268798828,
+    "load_y_px": 259.54510498046875,
+    "load_x_pos": -16.715318263582517,
+    "load_y_pos": 7.448978468915158,
+    "solver_frd": "data/fea_training_data/case_0033.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        284193805.31929845
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        282856143.77776396
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        215711957.61506316
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        189663399.21241915
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        153601808.0173798
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        153601808.0173798
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        153090504.0087378
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        149053266.18375513
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        139452247.26974952
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        137585772.31520876
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~113677442% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 34,
+    "file": "data/fea_training_data/sample_0034.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 9339.608034133791,
+    "load_x_px": 336.98712158203125,
+    "load_y_px": 392.8038330078125,
+    "load_x_pos": 4.457393500443189,
+    "load_y_pos": 252.8432515453495,
+    "solver_frd": "data/fea_training_data/case_0034.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        3376394.213350538
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        3294468.263250114
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        3294468.263250114
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        3198486.6552980957
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        3110409.6769899894
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        3110409.6769899894
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        3073073.776639238
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        3072606.4057153706
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        2665362.368718115
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        2665362.368718115
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~1350477% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 35,
+    "file": "data/fea_training_data/sample_0035.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 7866.86841408866,
+    "load_x_px": 357.8739013671875,
+    "load_y_px": 259.4948425292969,
+    "load_x_pos": 8.483521341597324,
+    "load_y_pos": 7.356436073414618,
+    "solver_frd": "data/fea_training_data/case_0035.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        2844009.94243568
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        2774976.886450835
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        2774976.886450835
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        2694148.241998944
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        2619935.9828254664
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        2619935.9828254664
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        2588454.0584323066
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        2588094.6481012786
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        2245064.934830663
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        2245064.934830663
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~1137523% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 36,
+    "file": "data/fea_training_data/sample_0036.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 4265.06368033758,
+    "load_x_px": 336.31927490234375,
+    "load_y_px": 367.3598327636719,
+    "load_x_pos": 4.328664694872394,
+    "load_y_pos": 205.98845897225854,
+    "solver_frd": "data/fea_training_data/case_0036.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        1541888.1053325497
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        1504468.047369761
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        1504468.047369761
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        1460646.5684603513
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        1420407.5849711534
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        1420407.5849711534
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        1403335.3486618514
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        1403142.1683556766
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        1217183.3669852337
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        1217183.3669852337
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~616675% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 37,
+    "file": "data/fea_training_data/sample_0037.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 8049.593879447547,
+    "load_x_px": 433.2215576171875,
+    "load_y_px": 309.0260009765625,
+    "load_x_pos": 23.00747991122043,
+    "load_y_pos": 98.56744192266916,
+    "solver_frd": "data/fea_training_data/case_0037.frd",
+    "fracture_points": [
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        1298027.4571896798
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        1298027.4571896798
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        1229913.8508393152
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        1229913.8508393152
+      ],
+      [
+        24.5,
+        -408.375,
+        21.553,
+        1215670.4238280877
+      ],
+      [
+        21.5,
+        -408.397,
+        21.8387,
+        1129106.775561532
+      ],
+      [
+        21.5,
+        -407.402,
+        21.9384,
+        1055741.3399668501
+      ],
+      [
+        24.5,
+        -407.377,
+        21.6028,
+        1050212.377260674
+      ],
+      [
+        24.5,
+        -407.402,
+        21.9384,
+        801069.5652652084
+      ],
+      [
+        24.5,
+        -408.397,
+        21.8387,
+        732503.9769063493
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:22.0, Y:-407.9) by ~519130% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 38,
+    "file": "data/fea_training_data/sample_0038.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 5630.23546384531,
+    "load_x_px": 280.6829528808594,
+    "load_y_px": 479.0722961425781,
+    "load_x_pos": -6.3957481330752515,
+    "load_y_pos": 411.70560256196524,
+    "solver_frd": "data/fea_training_data/case_0038.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        2035408.9638399454
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        1986024.647261813
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        1986024.647261813
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        1928174.6849844803
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        1875060.642168416
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        1875060.642168416
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        1852537.2648100443
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        1852276.6568663225
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        1606768.459520615
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        1606768.459520615
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~814083% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 39,
+    "file": "data/fea_training_data/sample_0039.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 2113.778315683982,
+    "load_x_px": 324.7970886230469,
+    "load_y_px": 377.212890625,
+    "load_x_pos": 2.1076601283414718,
+    "load_y_pos": 224.1327560784924,
+    "solver_frd": "data/fea_training_data/case_0039.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        764151.0821761623
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        745618.4813324105
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        745618.4813324105
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        723897.0852756557
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        703959.7527219908
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        703959.7527219908
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        695501.8310804149
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        695412.83017123
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        603235.3113103874
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        603235.3113103874
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~305580% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 40,
+    "file": "data/fea_training_data/sample_0040.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 6253.633348170383,
+    "load_x_px": 69.23566436767578,
+    "load_y_px": 276.3232727050781,
+    "load_x_pos": -47.15418269722349,
+    "load_y_pos": 38.345775315994395,
+    "solver_frd": "data/fea_training_data/case_0040.frd",
+    "fracture_points": [
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        212639811.01616907
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        198648740.69081762
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        198309739.65238923
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        197332162.23431927
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        196780781.8376402
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        196717703.7795643
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        176180048.02654988
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        176180048.02654988
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        173517933.78522038
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        120644321.8678517
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.2, Y:415.4) by ~85055844% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 41,
+    "file": "data/fea_training_data/sample_0041.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 2823.437087941306,
+    "load_x_px": 438.6501770019531,
+    "load_y_px": 269.4271545410156,
+    "load_x_pos": 24.053902099244098,
+    "load_y_pos": 25.64670546847456,
+    "solver_frd": "data/fea_training_data/case_0041.frd",
+    "fracture_points": [
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        357135.24651670695
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        357135.24651670695
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        333243.84751414927
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        333243.84751414927
+      ],
+      [
+        24.5,
+        -408.375,
+        21.553,
+        313527.2338060879
+      ],
+      [
+        21.5,
+        -408.397,
+        21.8387,
+        295104.8286639173
+      ],
+      [
+        21.5,
+        -407.402,
+        21.9384,
+        275525.3055924308
+      ],
+      [
+        24.5,
+        -407.377,
+        21.6028,
+        271385.84971055953
+      ],
+      [
+        24.5,
+        -407.402,
+        21.9384,
+        207605.6425262329
+      ],
+      [
+        24.5,
+        -408.397,
+        21.8387,
+        190376.23301656355
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:22.0, Y:-407.9) by ~142774% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 42,
+    "file": "data/fea_training_data/sample_0042.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 3479.296403877288,
+    "load_x_px": 136.16029357910156,
+    "load_y_px": 309.9669189453125,
+    "load_x_pos": -34.25383601366229,
+    "load_y_pos": 100.30019466882666,
+    "solver_frd": "data/fea_training_data/case_0042.frd",
+    "fracture_points": [
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        149141198.8337489
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        138386245.55160096
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        138150799.46712598
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        138005629.1548904
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        137470177.48096567
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        137042452.1327592
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        123647998.13404693
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        123647998.13404693
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        121818211.0880261
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        87441612.07310735
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.2, Y:415.4) by ~59656399% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 43,
+    "file": "data/fea_training_data/sample_0043.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 4568.70187469912,
+    "load_x_px": 302.35302734375,
+    "load_y_px": 485.02679443359375,
+    "load_x_pos": -2.218647032729848,
+    "load_y_pos": 422.67068490576435,
+    "solver_frd": "data/fea_training_data/case_0043.frd",
+    "fracture_points": [
+      [
+        34.5,
+        -422.0,
+        10.0,
+        9564955.959040487
+      ],
+      [
+        34.6472,
+        -422.0,
+        9.99639,
+        9564955.959040487
+      ],
+      [
+        34.5,
+        -423.0,
+        10.0,
+        9560753.481327936
+      ],
+      [
+        34.6472,
+        -423.0,
+        9.99639,
+        9560753.481327936
+      ],
+      [
+        24.0598,
+        431.0,
+        7.03247,
+        8432228.248335874
+      ],
+      [
+        24.0598,
+        430.0,
+        7.03247,
+        8411702.297533669
+      ],
+      [
+        24.2059,
+        431.0,
+        7.01445,
+        7428700.603008639
+      ],
+      [
+        24.2059,
+        430.0,
+        7.01445,
+        7413780.514824859
+      ],
+      [
+        24.3528,
+        431.0,
+        7.00361,
+        7052266.635808264
+      ],
+      [
+        24.3528,
+        430.0,
+        7.00361,
+        7047008.588229499
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:34.5, Y:-422.0) by ~3825902% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 44,
+    "file": "data/fea_training_data/sample_0044.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 9726.769107500608,
+    "load_x_px": 161.76580810546875,
+    "load_y_px": 340.2256774902344,
+    "load_x_pos": -29.318136256198873,
+    "load_y_pos": 156.0212307830213,
+    "solver_frd": "data/fea_training_data/case_0044.frd",
+    "fracture_points": [
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        406813730.98544794
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        398343499.86862916
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        397664537.7588438
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        395702895.9271218
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        394472744.56459945
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        376458082.9014305
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        336604071.36023057
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        336604071.36023057
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        333742060.73299056
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        238961072.3750069
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.2, Y:415.4) by ~162725412% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 45,
+    "file": "data/fea_training_data/sample_0045.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 9272.750202087167,
+    "load_x_px": 291.0107727050781,
+    "load_y_px": 409.0701599121094,
+    "load_x_pos": -4.404968993563649,
+    "load_y_pos": 282.797443556977,
+    "solver_frd": "data/fea_training_data/case_0045.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        3352252.8099670527
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        3270890.7259434457
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        3270890.7259434457
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        3175585.1785984263
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        3088144.97660675
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        3088144.97660675
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        3051053.544340066
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        3050591.2074377714
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        2646262.874961677
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        2646262.874961677
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~1340821% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 46,
+    "file": "data/fea_training_data/sample_0046.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 9940.069868589875,
+    "load_x_px": 51.84668731689453,
+    "load_y_px": 387.5032653808594,
+    "load_x_pos": -50.50606871273296,
+    "load_y_pos": 243.0823539096194,
+    "solver_frd": "data/fea_training_data/case_0046.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        1219646743.1933248
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        1214936473.2158709
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        1086609280.97446
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        942284026.7151256
+      ],
+      [
+        -49.2179,
+        416.258,
+        -24.5,
+        926921602.9488455
+      ],
+      [
+        -49.2678,
+        415.26,
+        -21.5,
+        926921602.9488455
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        862537450.6161335
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        862537450.6161335
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        857710782.6617548
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        856241540.3678794
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~487858617% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 47,
+    "file": "data/fea_training_data/sample_0047.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 8166.932609864584,
+    "load_x_px": 388.92529296875,
+    "load_y_px": 307.2230529785156,
+    "load_x_pos": 14.468963567431857,
+    "load_y_pos": 95.24737749599774,
+    "solver_frd": "data/fea_training_data/case_0047.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        2952481.94263589
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        2880818.253143094
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        2880818.253143094
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        2796906.9646541695
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        2719869.208259082
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        2719869.208259082
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        2687197.4669901947
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        2686811.9383549886
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        2330693.9845695337
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        2330693.9845695337
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~1180912% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 48,
+    "file": "data/fea_training_data/sample_0048.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 7490.065679936532,
+    "load_x_px": 151.10037231445312,
+    "load_y_px": 259.64312744140625,
+    "load_x_pos": -31.3739986019235,
+    "load_y_pos": 7.62951865174191,
+    "solver_frd": "data/fea_training_data/case_0048.frd",
+    "fracture_points": [
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        321063650.4358924
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        297911982.3354741
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        297404902.63923526
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        297092246.9885142
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        295939248.88723075
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        295017885.90849066
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        266183715.47892496
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        266183715.47892496
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        262244308.88657522
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        188239807.46143466
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.2, Y:415.4) by ~128425380% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 49,
+    "file": "data/fea_training_data/sample_0049.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 5645.227854353439,
+    "load_x_px": 146.9677276611328,
+    "load_y_px": 382.55926513671875,
+    "load_x_pos": -32.170602822428904,
+    "load_y_pos": 233.97802381615662,
+    "solver_frd": "data/fea_training_data/case_0049.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        333115094.9479614
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        331547281.52300686
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        252845046.89899683
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        222312431.16397318
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        180043362.7670023
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        180043362.7670023
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        179443947.3455744
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        174711337.72287464
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        163458372.58729345
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        161270086.7746285
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~133245957% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 50,
+    "file": "data/fea_training_data/sample_0050.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 2020.282253445976,
+    "load_x_px": 454.7040710449219,
+    "load_y_px": 441.59539794921875,
+    "load_x_pos": 27.148440280782836,
+    "load_y_pos": 342.69230543119755,
+    "solver_frd": "data/fea_training_data/case_0050.frd",
+    "fracture_points": [
+      [
+        25.0,
+        416.038,
+        20.5047,
+        601372.4984825783
+      ],
+      [
+        24.0,
+        415.992,
+        20.6536,
+        601372.4984825783
+      ],
+      [
+        24.0,
+        416.038,
+        20.5047,
+        578491.7391747697
+      ],
+      [
+        25.0,
+        415.992,
+        20.6536,
+        578491.7391747697
+      ],
+      [
+        24.5,
+        416.443,
+        20.9036,
+        308137.05057314597
+      ],
+      [
+        21.5,
+        415.463,
+        20.7056,
+        308137.05057314597
+      ],
+      [
+        24.5,
+        415.463,
+        20.7056,
+        303516.2880776701
+      ],
+      [
+        21.5,
+        416.443,
+        20.9036,
+        303516.2880776701
+      ],
+      [
+        25.0,
+        -407.992,
+        20.6536,
+        242959.25839443863
+      ],
+      [
+        24.0,
+        -407.992,
+        20.6536,
+        228568.321417683
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:25.0, Y:416.0) by ~240468% to handle over-stress safely.",
+      "structural_feature": "Add a localized stiffening pad at the load contact area to distribute the applied force.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 51,
+    "file": "data/fea_training_data/sample_0051.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 2128.2690638179156,
+    "load_x_px": 144.48312377929688,
+    "load_y_px": 360.3692321777344,
+    "load_x_pos": -32.649537674001074,
+    "load_y_pos": 193.1153510819526,
+    "solver_frd": "data/fea_training_data/case_0051.frd",
+    "fracture_points": [
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        89013192.3243354
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        87159542.31786145
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        87011241.87414457
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        86582085.09788269
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        86312651.29232852
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        82370991.88458394
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        73650833.71357141
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        73650833.71357141
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        73024497.13466962
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        52285958.46363534
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.2, Y:415.4) by ~35605196% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 52,
+    "file": "data/fea_training_data/sample_0052.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 3480.741425590563,
+    "load_x_px": 245.98147583007812,
+    "load_y_px": 313.1505126953125,
+    "load_x_pos": -13.084787463213168,
+    "load_y_pos": 106.16274893138535,
+    "solver_frd": "data/fea_training_data/case_0052.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        89139136.48769589
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        88761207.25946294
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        67506603.65783505
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        59403965.99760925
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        47999287.47673116
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        47973776.81555284
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        47973776.81555284
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        46749501.91602205
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        43752647.13555039
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        43179405.93217991
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~35655574% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 53,
+    "file": "data/fea_training_data/sample_0053.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 5109.376764050656,
+    "load_x_px": 123.96630096435547,
+    "load_y_px": 279.65313720703125,
+    "load_x_pos": -36.604344157567965,
+    "load_y_pos": 44.477726344681415,
+    "solver_frd": "data/fea_training_data/case_0053.frd",
+    "fracture_points": [
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        219015093.1928521
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        203222187.14629954
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        202876136.5023097
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        202661763.812946
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        201875922.30516273
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        201247543.41267672
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        181578074.86896393
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        181578074.86896393
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        178890604.91586074
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        128408695.83555897
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.2, Y:415.4) by ~87605957% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 54,
+    "file": "data/fea_training_data/sample_0054.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 9769.994537468154,
+    "load_x_px": 302.4537048339844,
+    "load_y_px": 299.65985107421875,
+    "load_x_pos": -2.1992376617909954,
+    "load_y_pos": 81.31979428391355,
+    "solver_frd": "data/fea_training_data/case_0054.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        3532028.5559451524
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        3446289.2791193402
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        3446289.2791193402
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        3345897.750800822
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        3253736.2556076217
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        3253736.2556076217
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        3214654.459909805
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        3214176.529023331
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        2788180.7444158206
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        2788180.7444158206
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~1412731% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 55,
+    "file": "data/fea_training_data/sample_0055.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 3375.798474869047,
+    "load_x_px": 71.96046447753906,
+    "load_y_px": 434.1007995605469,
+    "load_x_pos": -46.6289532918695,
+    "load_y_pos": 328.89113889229964,
+    "solver_frd": "data/fea_training_data/case_0055.frd",
+    "fracture_points": [
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        137491552.19002295
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        136080818.5256493
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        135849024.7449184
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        135179621.9293152
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        134758949.8180596
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        127285783.37433408
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        112994780.75790143
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        112994780.75790143
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        112626061.06917854
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        83715957.44663432
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.2, Y:415.4) by ~54996540% to handle over-stress safely.",
+      "structural_feature": "Add a localized stiffening pad at the load contact area to distribute the applied force.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 56,
+    "file": "data/fea_training_data/sample_0056.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 2479.9169501306624,
+    "load_x_px": 127.45633697509766,
+    "load_y_px": 430.5538024902344,
+    "load_x_pos": -35.93160618411755,
+    "load_y_pos": 322.35932913602346,
+    "solver_frd": "data/fea_training_data/case_0056.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        284252987.1317518
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        283085802.054595
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        217958755.26545963
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        191368131.02736694
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        156374924.35869378
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        156374924.35869378
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        153539893.6944189
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        149407719.2825248
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        139513526.7328451
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        137748272.19965374
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~113701114% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 57,
+    "file": "data/fea_training_data/sample_0057.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 9864.228923033155,
+    "load_x_px": 156.58311462402344,
+    "load_y_px": 361.5663757324219,
+    "load_x_pos": -30.31714838624208,
+    "load_y_pos": 195.31990686861522,
+    "solver_frd": "data/fea_training_data/case_0057.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        582071272.1917133
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        579330966.285419
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        441811081.49186975
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        388459218.37223995
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        314599823.9449997
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        314599823.9449997
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        313552285.48497
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        305282984.9163607
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        285619274.1428764
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        281796292.4349275
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~232828428% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 58,
+    "file": "data/fea_training_data/sample_0058.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 3649.215860034673,
+    "load_x_px": 332.3082275390625,
+    "load_y_px": 344.0506896972656,
+    "load_x_pos": 3.5554996148654965,
+    "load_y_pos": 163.0649741782765,
+    "solver_frd": "data/fea_training_data/case_0058.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        1319237.601727225
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        1287227.094891356
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        1287227.094891356
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        1249731.9070316642
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        1215310.2633367828
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        1215310.2633367828
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        1200710.9718253931
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        1200549.045326712
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        1041421.7896015956
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        1041421.7896015956
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~527615% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 59,
+    "file": "data/fea_training_data/sample_0059.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 7152.647023056302,
+    "load_x_px": 120.2746810913086,
+    "load_y_px": 446.61883544921875,
+    "load_x_pos": -37.3159365707484,
+    "load_y_pos": 351.9429410499946,
+    "solver_frd": "data/fea_training_data/case_0059.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        819851849.3291185
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        816483535.7140776
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        628642629.8972045
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        551949038.5533727
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        451020472.846425
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        451020472.846425
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        442845472.74033004
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        430926959.84978706
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        402388620.1957876
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        397298214.83509284
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~327940659% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 60,
+    "file": "data/fea_training_data/sample_0060.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 6418.172267162233,
+    "load_x_px": 281.2190246582031,
+    "load_y_px": 339.31451416015625,
+    "load_x_pos": -6.292418974427186,
+    "load_y_pos": 154.34335516411414,
+    "solver_frd": "data/fea_training_data/case_0060.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        2320275.1046690564
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        2263961.3765287544
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        2263961.3765287544
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        2198007.2075939607
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        2137464.880085561
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        2137464.880085561
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        2111803.9427172756
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        2111490.9361538426
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        1831634.802370538
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        1831634.802370538
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~928030% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 61,
+    "file": "data/fea_training_data/sample_0061.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 4090.7759622063118,
+    "load_x_px": 115.47457122802734,
+    "load_y_px": 351.7989196777344,
+    "load_x_pos": -38.241204201609925,
+    "load_y_pos": 177.33321974758366,
+    "solver_frd": "data/fea_training_data/case_0061.frd",
+    "fracture_points": [
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        175352502.04455766
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        162707463.81477526
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        162430368.8718996
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        162259861.24534294
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        161630258.90344915
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        161127324.39382714
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        145379166.7280608
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        145379166.7280608
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        143227139.2648232
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        102809273.53620781
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.2, Y:415.4) by ~70140920% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 62,
+    "file": "data/fea_training_data/sample_0062.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 9003.507633258349,
+    "load_x_px": 82.84796142578125,
+    "load_y_px": 437.8492431640625,
+    "load_x_pos": -44.530283343445745,
+    "load_y_pos": 335.79384491943665,
+    "solver_frd": "data/fea_training_data/case_0062.frd",
+    "fracture_points": [
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        376564991.0844242
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        368722806.5847743
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        368095442.49643975
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        366280226.9369347
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        365140191.8256774
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        348464904.71090657
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        311575004.54954684
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        311575004.54954684
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        308925966.0735384
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        221192046.00356948
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.2, Y:415.4) by ~150625916% to handle over-stress safely.",
+      "structural_feature": "Add a localized stiffening pad at the load contact area to distribute the applied force.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 63,
+    "file": "data/fea_training_data/sample_0063.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 7962.220657431519,
+    "load_x_px": 437.1448059082031,
+    "load_y_px": 292.5469665527344,
+    "load_x_pos": 23.76372661203527,
+    "load_y_pos": 68.22153822662287,
+    "solver_frd": "data/fea_training_data/case_0063.frd",
+    "fracture_points": [
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        337006.72354029724
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        337006.72354029724
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        298896.72325101076
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        298896.72325101076
+      ],
+      [
+        22.0,
+        415.876,
+        21.4221,
+        159678.83762019017
+      ],
+      [
+        21.0,
+        415.876,
+        21.4221,
+        158205.90133863786
+      ],
+      [
+        21.5,
+        -408.397,
+        21.8387,
+        157569.6199453067
+      ],
+      [
+        24.5,
+        -408.375,
+        21.553,
+        155816.1857653174
+      ],
+      [
+        21.5,
+        -407.402,
+        21.9384,
+        147319.35754467605
+      ],
+      [
+        24.5,
+        -407.377,
+        21.6028,
+        136045.4892734787
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:22.0, Y:-407.9) by ~134722% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 64,
+    "file": "data/fea_training_data/sample_0064.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 9329.379798363083,
+    "load_x_px": 457.6300964355469,
+    "load_y_px": 367.2837219238281,
+    "load_x_pos": 27.712454712068094,
+    "load_y_pos": 205.84825261725854,
+    "solver_frd": "data/fea_training_data/case_0064.frd",
+    "fracture_points": [
+      [
+        25.0,
+        416.038,
+        20.5047,
+        2777047.539471416
+      ],
+      [
+        24.0,
+        415.992,
+        20.6536,
+        2777047.539471416
+      ],
+      [
+        24.0,
+        416.038,
+        20.5047,
+        2671388.6379735367
+      ],
+      [
+        25.0,
+        415.992,
+        20.6536,
+        2671388.6379735367
+      ],
+      [
+        24.5,
+        416.443,
+        20.9036,
+        1422936.2378088206
+      ],
+      [
+        21.5,
+        415.463,
+        20.7056,
+        1422936.2378088206
+      ],
+      [
+        24.5,
+        415.463,
+        20.7056,
+        1401597.8899667123
+      ],
+      [
+        21.5,
+        416.443,
+        20.9036,
+        1401597.8899667123
+      ],
+      [
+        25.0,
+        -407.992,
+        20.6536,
+        1121952.0835442774
+      ],
+      [
+        24.0,
+        -407.992,
+        20.6536,
+        1055497.485069598
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:25.0, Y:416.0) by ~1110739% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 65,
+    "file": "data/fea_training_data/sample_0065.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 4495.502906333582,
+    "load_x_px": 229.83135986328125,
+    "load_y_px": 285.9381103515625,
+    "load_x_pos": -16.19786966753243,
+    "load_y_pos": 56.05136913745672,
+    "solver_frd": "data/fea_training_data/case_0065.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        265272325.26253292
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        264023255.7836913
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        201349794.688625
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        177035725.2380272
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        143374947.89093736
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        143374947.89093736
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        142897254.04595393
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        139129256.95372123
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        130167315.38779865
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        128424768.83245419
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~106108850% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 66,
+    "file": "data/fea_training_data/sample_0066.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 6265.415867065353,
+    "load_x_px": 144.28570556640625,
+    "load_y_px": 312.84173583984375,
+    "load_x_pos": -32.687589168073245,
+    "load_y_pos": 105.59406189466326,
+    "solver_frd": "data/fea_training_data/case_0066.frd",
+    "fracture_points": [
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        262046975.36242905
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        256590191.61998224
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        256153505.7423882
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        254889239.8074795
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        254096827.64493442
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        242492799.07934973
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        216820543.2822123
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        216820543.2822123
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        214976556.11219677
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        153924690.30165076
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.2, Y:415.4) by ~104818710% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 67,
+    "file": "data/fea_training_data/sample_0067.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 6327.317021850554,
+    "load_x_px": 57.25458526611328,
+    "load_y_px": 256.1307067871094,
+    "load_x_pos": -49.46364466382488,
+    "load_y_pos": 1.161433257123632,
+    "solver_frd": "data/fea_training_data/case_0067.frd",
+    "fracture_points": [
+      [
+        -49.2179,
+        416.258,
+        -24.5,
+        187726181.69061562
+      ],
+      [
+        -49.2678,
+        415.26,
+        -21.5,
+        187726181.69061562
+      ],
+      [
+        -49.2678,
+        415.26,
+        -24.5,
+        176520795.1747161
+      ],
+      [
+        -49.2179,
+        416.258,
+        -21.5,
+        176520795.1747161
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        118739458.32275428
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        118537110.34121415
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        118094930.99573368
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        117874834.93566725
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        107131900.96034165
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        106342937.89726521
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-49.2, Y:416.3) by ~75090392% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 68,
+    "file": "data/fea_training_data/sample_0068.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 8460.106671032936,
+    "load_x_px": 233.0447540283203,
+    "load_y_px": 379.970947265625,
+    "load_x_pos": -15.578456169486607,
+    "load_y_pos": 229.21167812402186,
+    "solver_frd": "data/fea_training_data/case_0068.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        969714954.1611254
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        965732011.1891745
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        743555007.7019016
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        652842471.2642035
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        533465119.1285361
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        533465119.1285361
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        523794295.0000273
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        509697997.7244139
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        475942376.33949333
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        469921862.9739946
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~387885901% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 69,
+    "file": "data/fea_training_data/sample_0069.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 4111.144981390629,
+    "load_x_px": 271.4570007324219,
+    "load_y_px": 379.0293273925781,
+    "load_x_pos": -8.174141860286994,
+    "load_y_pos": 227.47768660936234,
+    "solver_frd": "data/fea_training_data/case_0069.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        1486237.7254931326
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        1450173.4706865961
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        1450173.4706865961
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        1407939.4151652975
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        1369153.8484447766
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        1369153.8484447766
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        1352704.5824217054
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        1352513.8587444345
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        1173243.65096609
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        1173243.65096609
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~594415% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 70,
+    "file": "data/fea_training_data/sample_0070.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 9141.2669700445,
+    "load_x_px": 363.3106994628906,
+    "load_y_px": 373.4294738769531,
+    "load_x_pos": 9.531506548327634,
+    "load_y_pos": 217.16560677655661,
+    "solver_frd": "data/fea_training_data/case_0070.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        3304707.2022192827
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        3224506.1003311994
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        3224506.1003311994
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        3130593.1019123197
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        3044347.431908882
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        3044347.431908882
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        3007789.363667122
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        3007340.567993411
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        2608776.2828061744
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        2608776.2828061744
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~1321802% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 71,
+    "file": "data/fea_training_data/sample_0071.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 3556.8604633912446,
+    "load_x_px": 357.15087890625,
+    "load_y_px": 475.8876647949219,
+    "load_x_pos": 8.34414464407493,
+    "load_y_pos": 405.8411044927112,
+    "solver_frd": "data/fea_training_data/case_0071.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        1285868.382293849
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        1254652.4525958651
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        1254652.4525958651
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        1218107.0094474459
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        1184550.375366134
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        1184550.375366134
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        1170328.319487365
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        1170157.2444824628
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        1015061.2290955359
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        1015061.2290955359
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~514267% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 72,
+    "file": "data/fea_training_data/sample_0072.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 3058.9308116480706,
+    "load_x_px": 413.7013854980469,
+    "load_y_px": 291.11553955078125,
+    "load_x_pos": 19.244790122441813,
+    "load_y_pos": 65.5855741641959,
+    "solver_frd": "data/fea_training_data/case_0072.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        1105851.1691543306
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        1079010.4326572411
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        1079010.4326572411
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        1047588.6148695059
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        1018725.7625574805
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        1018725.7625574805
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        1006493.0121035813
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        1006348.797013918
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        872963.7031598564
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        872963.7031598564
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~442260% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 73,
+    "file": "data/fea_training_data/sample_0073.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 9541.852046535641,
+    "load_x_px": 392.4689636230469,
+    "load_y_px": 282.9048767089844,
+    "load_x_pos": 15.152038597280125,
+    "load_y_pos": 50.465680894909255,
+    "solver_frd": "data/fea_training_data/case_0073.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        3449542.43763836
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        3365813.8874780927
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        3365813.8874780927
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        3267726.0750169987
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        3177758.5021541337
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        3177758.5021541337
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        3139620.9643007354
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        3139141.13567043
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        2723104.7727661454
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        2723104.7727661454
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~1379736% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 74,
+    "file": "data/fea_training_data/sample_0074.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 9480.07282761241,
+    "load_x_px": 262.8681640625,
+    "load_y_px": 381.3776550292969,
+    "load_x_pos": -9.829722015501552,
+    "load_y_pos": 231.8021396085103,
+    "solver_frd": "data/fea_training_data/case_0074.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        3427203.8914057915
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        3344022.566839762
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        3344022.566839762
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        3246601.29987792
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        3157183.963079514
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        3157183.963079514
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        3119240.6245845207
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        3118801.8059421536
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        2705459.8954973053
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        2705459.8954973053
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~1370801% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 75,
+    "file": "data/fea_training_data/sample_0075.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 2346.344852427447,
+    "load_x_px": 152.34483337402344,
+    "load_y_px": 428.11187744140625,
+    "load_x_pos": -31.134117880838737,
+    "load_y_pos": 317.8626201981788,
+    "solver_frd": "data/fea_training_data/case_0075.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        182322434.38102958
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        182040723.57927454
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        118058300.94245173
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        109457219.5795173
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        94515030.00080357
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        93241540.29068919
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        89677807.36479019
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        88305997.0571208
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        63767000.271471135
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        63767000.271471135
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~72928893% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 76,
+    "file": "data/fea_training_data/sample_0076.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 2888.144449452244,
+    "load_x_px": 146.1610870361328,
+    "load_y_px": 429.7513732910156,
+    "load_x_pos": -32.32609365186155,
+    "load_y_pos": 320.8816686637175,
+    "solver_frd": "data/fea_training_data/case_0076.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        331045295.890472
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        329685122.5591
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        253837746.550152
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        222869977.9919604
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        182116414.9640224
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        182116414.9640224
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        178814918.1513711
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        174002836.10030702
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        162479524.7151958
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        160424245.2144221
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~132418038% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 77,
+    "file": "data/fea_training_data/sample_0077.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 8061.036564631792,
+    "load_x_px": 364.7396545410156,
+    "load_y_px": 315.73260498046875,
+    "load_x_pos": 9.806965303774845,
+    "load_y_pos": 110.91753584680784,
+    "solver_frd": "data/fea_training_data/case_0077.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        2914234.7123812796
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        2843466.7398470263
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        2843466.7398470263
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        2760628.5182927093
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        2684603.0948568825
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        2684603.0948568825
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        2652354.5229453244
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        2651956.63225466
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        2300484.816192674
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        2300484.816192674
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~1165613% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 78,
+    "file": "data/fea_training_data/sample_0078.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 5096.472498816422,
+    "load_x_px": 263.035888671875,
+    "load_y_px": 317.9569091796875,
+    "load_x_pos": -9.797390065021702,
+    "load_y_pos": 115.01362763284811,
+    "solver_frd": "data/fea_training_data/case_0078.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        1842453.0923773882
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        1797740.3488907602
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        1797740.3488907602
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        1745374.9191726688
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        1697298.3403980776
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        1697298.3403980776
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        1676923.6317965197
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        1676662.299706855
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        1454449.7749641305
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        1454449.7749641305
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~736901% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 79,
+    "file": "data/fea_training_data/sample_0079.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 7174.372636751057,
+    "load_x_px": 402.9698791503906,
+    "load_y_px": 347.815673828125,
+    "load_x_pos": 17.176197698610125,
+    "load_y_pos": 169.9981663522579,
+    "solver_frd": "data/fea_training_data/case_0079.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        2593638.032887203
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        2530701.3449251507
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        2530701.3449251507
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        2456962.832401011
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        2389310.2178282477
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        2389310.2178282477
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        2360624.178153073
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        2360272.0233778437
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        2047430.2605049117
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        2047430.2605049117
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~1037375% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 80,
+    "file": "data/fea_training_data/sample_0080.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 4240.572283271609,
+    "load_x_px": 206.128662109375,
+    "load_y_px": 331.57025146484375,
+    "load_x_pos": -20.766783259785548,
+    "load_y_pos": 140.0823646510892,
+    "solver_frd": "data/fea_training_data/case_0080.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        250228694.5227056
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        249051064.10376552
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        189931679.83248925
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        166996323.3663841
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        135244463.70656472
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        135244463.70656472
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        134793773.53136733
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        131239579.06812018
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        122785719.22484106
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        121142798.7754648
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~100091397% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 81,
+    "file": "data/fea_training_data/sample_0081.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 2408.83445341352,
+    "load_x_px": 352.02691650390625,
+    "load_y_px": 368.54840087890625,
+    "load_x_pos": 7.356462543224367,
+    "load_y_pos": 208.177173366331,
+    "solver_frd": "data/fea_training_data/case_0081.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        870831.8249099535
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        849697.3429384906
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        849697.3429384906
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        824948.3914748182
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        802223.5641924938
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        802223.5641924938
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        792591.3990350766
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        792476.7313713318
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        687442.4242398195
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        687442.4242398195
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~348252% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 82,
+    "file": "data/fea_training_data/sample_0082.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 8400.6283318738,
+    "load_x_px": 113.16211700439453,
+    "load_y_px": 456.19110107421875,
+    "load_x_pos": -38.686951898357925,
+    "load_y_pos": 369.570037949719,
+    "solver_frd": "data/fea_training_data/case_0082.frd",
+    "fracture_points": [
+      [
+        -49.2179,
+        416.258,
+        -24.5,
+        282312916.59578526
+      ],
+      [
+        -49.2678,
+        415.26,
+        -21.5,
+        282312916.59578526
+      ],
+      [
+        -49.2678,
+        415.26,
+        -24.5,
+        261882400.95965153
+      ],
+      [
+        -49.2179,
+        416.258,
+        -21.5,
+        261882400.95965153
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        248528212.17542848
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        248104518.18752453
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        247209718.01920006
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        246972718.17767727
+      ],
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        194942493.10155648
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        189857842.95060968
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-49.2, Y:416.3) by ~112925086% to handle over-stress safely.",
+      "structural_feature": "Add a localized stiffening pad at the load contact area to distribute the applied force.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 83,
+    "file": "data/fea_training_data/sample_0083.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 5734.7087651127695,
+    "load_x_px": 78.28661346435547,
+    "load_y_px": 367.2146911621094,
+    "load_x_pos": -45.40952659661095,
+    "load_y_pos": 205.72116437486153,
+    "solver_frd": "data/fea_training_data/case_0083.frd",
+    "fracture_points": [
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        77745470.45457362
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        77613073.40580104
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        77230934.7588264
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        76991228.32248878
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        28282115.55422235
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        28282115.55422235
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        27774604.265879314
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        26167137.224030964
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        25564497.085789327
+      ],
+      [
+        -50.0351,
+        -407.919,
+        -25.0,
+        24698225.29670741
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.0, Y:-407.4) by ~31098108% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 84,
+    "file": "data/fea_training_data/sample_0084.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 7747.9666531837365,
+    "load_x_px": 382.2239685058594,
+    "load_y_px": 270.78131103515625,
+    "load_x_pos": 13.177220127516605,
+    "load_y_pos": 28.140363583635462,
+    "solver_frd": "data/fea_training_data/case_0084.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        2801007.3490928225
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        2733037.6610655454
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        2733037.6610655454
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        2653418.168799445
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        2580332.7573467516
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        2580332.7573467516
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        2549350.178988377
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        2548979.781807592
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        2211142.760121356
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        2211142.760121356
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~1120322% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 85,
+    "file": "data/fea_training_data/sample_0085.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 6091.849523017916,
+    "load_x_px": 233.41122436523438,
+    "load_y_px": 260.4513244628906,
+    "load_x_pos": -15.507816877164089,
+    "load_y_pos": 9.11782973310758,
+    "solver_frd": "data/fea_training_data/case_0085.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        359469894.94481605
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        357776901.23864233
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        272848879.5513106
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        239900634.33854872
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        194287138.71869543
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        194287138.71869543
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        193640094.26163262
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        188533762.87783885
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        176390016.97547716
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        174028502.8177034
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~143787877% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 86,
+    "file": "data/fea_training_data/sample_0086.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 3241.534173652736,
+    "load_x_px": 375.5217590332031,
+    "load_y_px": 278.40234375,
+    "load_x_pos": 11.885306446531878,
+    "load_y_pos": 42.174396349009214,
+    "solver_frd": "data/fea_training_data/case_0086.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        1171868.4268683922
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        1143424.0203721186
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        1143424.0203721186
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        1110111.819801501
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        1079538.6860097684
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        1079538.6860097684
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        1066580.401994819
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        1066416.9891025554
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        925081.530152986
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        925081.530152986
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~468667% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 87,
+    "file": "data/fea_training_data/sample_0087.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 5961.079068117793,
+    "load_x_px": 442.2053527832031,
+    "load_y_px": 441.6401672363281,
+    "load_x_pos": 24.739197997908192,
+    "load_y_pos": 342.77472662435446,
+    "solver_frd": "data/fea_training_data/case_0087.frd",
+    "fracture_points": [
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        754013.9492891363
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        754013.9492891363
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        703572.7021922529
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        703572.7021922529
+      ],
+      [
+        24.5,
+        -408.375,
+        21.553,
+        661945.5594829444
+      ],
+      [
+        21.5,
+        -408.397,
+        21.8387,
+        623045.1602632349
+      ],
+      [
+        21.5,
+        -407.402,
+        21.9384,
+        581717.5371666647
+      ],
+      [
+        24.5,
+        -407.377,
+        21.6028,
+        572972.7744794026
+      ],
+      [
+        24.5,
+        -407.402,
+        21.9384,
+        438315.5598093684
+      ],
+      [
+        24.5,
+        -408.397,
+        21.8387,
+        401938.4001918856
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:22.0, Y:-407.9) by ~301525% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 88,
+    "file": "data/fea_training_data/sample_0088.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 2153.540646698301,
+    "load_x_px": 238.7725372314453,
+    "load_y_px": 374.484130859375,
+    "load_x_pos": -14.474374562042449,
+    "load_y_pos": 219.1078097415605,
+    "solver_frd": "data/fea_training_data/case_0088.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        246843084.6462367
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        245829700.3667852
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        189273728.26356944
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        166182654.75985685
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        135794813.72254354
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        135794813.72254354
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        133333281.56194864
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        129745129.3295979
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        121152152.91781208
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        119619903.3787981
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~98737153% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 89,
+    "file": "data/fea_training_data/sample_0089.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 2727.9001340455916,
+    "load_x_px": 140.17376708984375,
+    "load_y_px": 456.0961608886719,
+    "load_x_pos": -33.48020613424738,
+    "load_y_pos": 369.3952203186926,
+    "solver_frd": "data/fea_training_data/case_0089.frd",
+    "fracture_points": [
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        43514228.24513017
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        40275877.27463022
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        38854483.030111864
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        38854483.030111864
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        38504312.04693901
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        37744333.443106025
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        37679979.95200061
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        37487021.35204027
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        37380327.07831209
+      ],
+      [
+        -49.7448,
+        416.353,
+        -21.5,
+        21730123.637470197
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.2, Y:415.4) by ~17405611% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 90,
+    "file": "data/fea_training_data/sample_0090.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 5989.025139177831,
+    "load_x_px": 106.34227752685547,
+    "load_y_px": 360.5110778808594,
+    "load_x_pos": -40.0015360455381,
+    "load_y_pos": 193.37660063731934,
+    "solver_frd": "data/fea_training_data/case_0090.frd",
+    "fracture_points": [
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        243924924.0202317
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        241421405.5706981
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        241010325.57833245
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        239822380.49508056
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        239077197.19554687
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        225819113.4890659
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        200464909.46392623
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        200464909.46392623
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        199810155.1488455
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        148520949.9025124
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.2, Y:415.4) by ~97569889% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 91,
+    "file": "data/fea_training_data/sample_0091.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 3603.691291040982,
+    "load_x_px": 316.2734375,
+    "load_y_px": 327.7529602050781,
+    "load_x_pos": 0.4646434153976102,
+    "load_y_pos": 133.05292551033284,
+    "solver_frd": "data/fea_training_data/case_0091.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        1302796.3285525485
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        1271173.5894758715
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        1271173.5894758715
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        1234142.9072141524
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        1200154.4679233837
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        1200154.4679233837
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        1185740.9932874548
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        1185563.632181993
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        1028430.092830665
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        1028430.092830665
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~521038% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 92,
+    "file": "data/fea_training_data/sample_0092.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 6912.8658450079365,
+    "load_x_px": 428.7314758300781,
+    "load_y_px": 267.2344665527344,
+    "load_x_pos": 22.141985618783096,
+    "load_y_pos": 21.608870328716666,
+    "solver_frd": "data/fea_training_data/case_0092.frd",
+    "fracture_points": [
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        480887.7273698048
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        480887.7273698048
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        447796.9877179683
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        447796.9877179683
+      ],
+      [
+        24.5,
+        -408.375,
+        21.553,
+        408615.21906151366
+      ],
+      [
+        21.5,
+        -408.397,
+        21.8387,
+        380132.7563144092
+      ],
+      [
+        21.5,
+        -407.402,
+        21.9384,
+        356285.29178165295
+      ],
+      [
+        24.5,
+        -407.377,
+        21.6028,
+        353036.9162395349
+      ],
+      [
+        24.5,
+        -407.402,
+        21.9384,
+        268939.3141234693
+      ],
+      [
+        24.5,
+        -408.397,
+        21.8387,
+        247184.7563702309
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:22.0, Y:-407.9) by ~192275% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 93,
+    "file": "data/fea_training_data/sample_0093.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 4985.501520954707,
+    "load_x_px": 103.994140625,
+    "load_y_px": 412.7011413574219,
+    "load_x_pos": -40.45416070025205,
+    "load_y_pos": 289.483937738419,
+    "solver_frd": "data/fea_training_data/case_0093.frd",
+    "fracture_points": [
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        208514744.73526734
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        204173197.28418443
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        203825117.31823096
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        202820156.49223182
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        202188113.402068
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        192955284.32768947
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        172528286.54494038
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        172528286.54494038
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        171061228.7369475
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        122481003.03345372
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.2, Y:415.4) by ~83405817% to handle over-stress safely.",
+      "structural_feature": "Add a localized stiffening pad at the load contact area to distribute the applied force.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 94,
+    "file": "data/fea_training_data/sample_0094.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 9218.210503891569,
+    "load_x_px": 373.9732971191406,
+    "load_y_px": 300.6953430175781,
+    "load_x_pos": 11.586829910640894,
+    "load_y_pos": 83.22664059977619,
+    "solver_frd": "data/fea_training_data/case_0094.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        3332507.0050559533
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        3251649.0510146283
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        3251649.0510146283
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        3156923.1617611474
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        3069974.625615158
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        3069974.625615158
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        3033101.0037890463
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        3032681.268285891
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        2630725.0493898066
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        2630725.0493898066
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~1332922% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 95,
+    "file": "data/fea_training_data/sample_0095.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 4832.75798151008,
+    "load_x_px": 404.5519714355469,
+    "load_y_px": 474.9287109375,
+    "load_x_pos": 17.481153450094155,
+    "load_y_pos": 404.0751989809796,
+    "solver_frd": "data/fea_training_data/case_0095.frd",
+    "fracture_points": [
+      [
+        24.2059,
+        -422.0,
+        7.01445,
+        41216424.78221637
+      ],
+      [
+        24.2059,
+        -423.0,
+        7.01445,
+        41180276.414923444
+      ],
+      [
+        24.0598,
+        430.0,
+        7.03247,
+        38902013.22894147
+      ],
+      [
+        24.0598,
+        431.0,
+        7.03247,
+        38896572.79422375
+      ],
+      [
+        34.5,
+        -422.0,
+        10.0,
+        33913781.54182114
+      ],
+      [
+        34.6472,
+        -422.0,
+        9.99639,
+        33913781.54182114
+      ],
+      [
+        34.5,
+        -423.0,
+        10.0,
+        33899922.42670512
+      ],
+      [
+        34.6472,
+        -423.0,
+        9.99639,
+        33899922.42670512
+      ],
+      [
+        24.2059,
+        430.0,
+        7.01445,
+        33407147.053927246
+      ],
+      [
+        24.2059,
+        431.0,
+        7.01445,
+        33386424.77805647
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.2, Y:-422.0) by ~16486489% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 96,
+    "file": "data/fea_training_data/sample_0096.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 6354.016425166531,
+    "load_x_px": 355.7461853027344,
+    "load_y_px": 484.17230224609375,
+    "load_x_pos": 8.073377046023609,
+    "load_y_pos": 421.09720211106475,
+    "solver_frd": "data/fea_training_data/case_0096.frd",
+    "fracture_points": [
+      [
+        34.5,
+        -422.0,
+        10.0,
+        13599048.330829835
+      ],
+      [
+        34.6472,
+        -422.0,
+        9.99639,
+        13599048.330829835
+      ],
+      [
+        34.5,
+        -423.0,
+        10.0,
+        13593173.085211806
+      ],
+      [
+        34.6472,
+        -423.0,
+        9.99639,
+        13593173.085211806
+      ],
+      [
+        24.0598,
+        431.0,
+        7.03247,
+        11524580.968301712
+      ],
+      [
+        24.0598,
+        430.0,
+        7.03247,
+        11517241.482047372
+      ],
+      [
+        24.2059,
+        -422.0,
+        7.01445,
+        10642298.91728526
+      ],
+      [
+        24.2059,
+        -423.0,
+        7.01445,
+        10633804.366433445
+      ],
+      [
+        24.2059,
+        431.0,
+        7.01445,
+        10039881.94731317
+      ],
+      [
+        24.2059,
+        430.0,
+        7.01445,
+        10038070.691474149
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:34.5, Y:-422.0) by ~5439539% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 97,
+    "file": "data/fea_training_data/sample_0097.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 3002.2349179209423,
+    "load_x_px": 132.7338409423828,
+    "load_y_px": 264.9212646484375,
+    "load_x_pos": -34.91431619914033,
+    "load_y_pos": 17.349154434147373,
+    "solver_frd": "data/fea_training_data/case_0097.frd",
+    "fracture_points": [
+      [
+        -50.1825,
+        415.441,
+        -24.5,
+        128691837.86851595
+      ],
+      [
+        -47.9723,
+        -407.394,
+        -24.5,
+        119411490.32918482
+      ],
+      [
+        -48.2672,
+        -408.349,
+        -24.5,
+        119208185.62550499
+      ],
+      [
+        -49.8876,
+        416.397,
+        -24.5,
+        119083010.91249679
+      ],
+      [
+        -47.8175,
+        -407.441,
+        -21.5,
+        118620958.58852053
+      ],
+      [
+        -48.1124,
+        -408.397,
+        -21.5,
+        118251895.76921928
+      ],
+      [
+        -49.8802,
+        415.871,
+        -24.0,
+        106693951.62739618
+      ],
+      [
+        -49.8802,
+        -407.871,
+        -25.0,
+        106693951.62739618
+      ],
+      [
+        -50.0351,
+        415.919,
+        -24.0,
+        105114873.39551443
+      ],
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        75452095.30006471
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-50.2, Y:415.4) by ~51476655% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 98,
+    "file": "data/fea_training_data/sample_0098.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 3107.859649327561,
+    "load_x_px": 107.6170654296875,
+    "load_y_px": 444.3231201171875,
+    "load_x_pos": -39.755811384738216,
+    "load_y_pos": 347.7152893839402,
+    "solver_frd": "data/fea_training_data/case_0098.frd",
+    "fracture_points": [
+      [
+        -48.6456,
+        -408.273,
+        -21.5,
+        356229016.5511662
+      ],
+      [
+        -48.5462,
+        -407.278,
+        -21.5,
+        354765688.8729165
+      ],
+      [
+        -49.081,
+        416.251,
+        -21.5,
+        273148597.2198563
+      ],
+      [
+        -49.081,
+        415.251,
+        -21.5,
+        239824832.66657567
+      ],
+      [
+        -49.106,
+        -407.252,
+        -24.5,
+        195970932.7591319
+      ],
+      [
+        -49.2179,
+        -408.258,
+        -24.5,
+        195970932.7591319
+      ],
+      [
+        -48.7945,
+        -408.258,
+        -21.5,
+        192418327.0917116
+      ],
+      [
+        -48.7198,
+        -407.26,
+        -21.5,
+        187240238.718033
+      ],
+      [
+        -48.5337,
+        -407.279,
+        -24.5,
+        174839809.78845847
+      ],
+      [
+        -48.658,
+        -408.271,
+        -24.5,
+        172628058.96882436
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:-48.6, Y:-408.3) by ~142491526% to handle over-stress safely.",
+      "structural_feature": "Add a larger fillet / gusset where the support base meets the vertical structure.",
+      "safety_factor": 0.0
+    }
+  },
+  {
+    "sample_id": 99,
+    "file": "data/fea_training_data/sample_0099.npz",
+    "part_size_mm": {
+      "width_x": 98.5,
+      "height_y": 941.0,
+      "depth_z": 72.5
+    },
+    "load_magnitude": 3887.827709239443,
+    "load_x_px": 318.7969055175781,
+    "load_y_px": 340.447998046875,
+    "load_x_pos": 0.9510693551310325,
+    "load_y_pos": 156.43065606909607,
+    "solver_frd": "data/fea_training_data/case_0099.frd",
+    "fracture_points": [
+      [
+        24.5,
+        416.516,
+        22.3479,
+        1405519.117820174
+      ],
+      [
+        22.0,
+        -407.876,
+        21.4221,
+        1371403.1727368513
+      ],
+      [
+        22.0,
+        -407.884,
+        21.2665,
+        1371403.1727368513
+      ],
+      [
+        24.5,
+        -407.56,
+        22.6427,
+        1331442.9384119322
+      ],
+      [
+        21.0,
+        -407.876,
+        21.4221,
+        1294775.891470555
+      ],
+      [
+        21.0,
+        -407.884,
+        21.2665,
+        1294775.891470555
+      ],
+      [
+        24.5,
+        -408.516,
+        22.3479,
+        1279228.8327239463
+      ],
+      [
+        24.5,
+        415.56,
+        22.6427,
+        1279039.431171721
+      ],
+      [
+        24.5,
+        416.561,
+        22.4706,
+        1109515.7556745557
+      ],
+      [
+        21.5,
+        415.621,
+        22.8128,
+        1109515.7556745557
+      ]
+    ],
+    "recommendation": {
+      "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+      "dimension_modification": "Increase local thickness/width at hotspot (X:24.5, Y:416.5) by ~562127% to handle over-stress safely.",
+      "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+      "safety_factor": 0.0
+    }
+  }
+]
