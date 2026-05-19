@@ -19,7 +19,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
-from torch.cuda.amp import GradScaler, autocast
+from torch import amp
 import logging
 import json
 from pathlib import Path
@@ -31,6 +31,13 @@ from tqdm import tqdm
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+
+# Lower-memory defaults for laptop GPUs such as RTX 4050.
+DEFAULT_BATCH_SIZE = 2
+DEFAULT_NUM_WORKERS = 0
+DEFAULT_BASE_CHANNELS = 16
+DEFAULT_EPOCHS = 3
 
 
 class DoubleConv(nn.Module):
@@ -73,7 +80,7 @@ class UNet(nn.Module):
     - Multi-channel: Can predict multiple outputs
     """
     
-    def __init__(self, in_channels: int = 3, out_channels: int = 2):
+    def __init__(self, in_channels: int = 3, out_channels: int = 2, base_channels: int = 32):
         """
         Initialize U-Net model.
         
@@ -82,49 +89,55 @@ class UNet(nn.Module):
             out_channels: Output channels (2: stress + strain)
         """
         super().__init__()
+
+        c1 = base_channels
+        c2 = c1 * 2
+        c3 = c2 * 2
+        c4 = c3 * 2
+        c5 = c4 * 2
         
         # ========== ENCODER (Downsampling) ==========
         
         # Level 1: 512×512 → 256×256
-        self.enc1 = DoubleConv(in_channels, 64)
+        self.enc1 = DoubleConv(in_channels, c1)
         self.pool1 = nn.MaxPool2d(2, 2)
         
         # Level 2: 256×256 → 128×128
-        self.enc2 = DoubleConv(64, 128)
+        self.enc2 = DoubleConv(c1, c2)
         self.pool2 = nn.MaxPool2d(2, 2)
         
         # Level 3: 128×128 → 64×64
-        self.enc3 = DoubleConv(128, 256)
+        self.enc3 = DoubleConv(c2, c3)
         self.pool3 = nn.MaxPool2d(2, 2)
         
         # Level 4: 64×64 → 32×32
-        self.enc4 = DoubleConv(256, 512)
+        self.enc4 = DoubleConv(c3, c4)
         self.pool4 = nn.MaxPool2d(2, 2)
         
         # ========== BOTTLENECK ==========
         # Level 5: 32×32 (most compressed)
-        self.bottleneck = DoubleConv(512, 1024)
+        self.bottleneck = DoubleConv(c4, c5)
         
         # ========== DECODER (Upsampling) ==========
         
         # Level 4: 32×32 → 64×64
-        self.upconv4 = nn.ConvTranspose2d(1024, 512, kernel_size=2, stride=2)
-        self.dec4 = DoubleConv(1024, 512)  # Note: 1024 because of skip concatenation
+        self.upconv4 = nn.ConvTranspose2d(c5, c4, kernel_size=2, stride=2)
+        self.dec4 = DoubleConv(c4 * 2, c4)  # skip concatenation doubles channels
         
         # Level 3: 64×64 → 128×128
-        self.upconv3 = nn.ConvTranspose2d(512, 256, kernel_size=2, stride=2)
-        self.dec3 = DoubleConv(512, 256)
+        self.upconv3 = nn.ConvTranspose2d(c4, c3, kernel_size=2, stride=2)
+        self.dec3 = DoubleConv(c3 * 2, c3)
         
         # Level 2: 128×128 → 256×256
-        self.upconv2 = nn.ConvTranspose2d(256, 128, kernel_size=2, stride=2)
-        self.dec2 = DoubleConv(256, 128)
+        self.upconv2 = nn.ConvTranspose2d(c3, c2, kernel_size=2, stride=2)
+        self.dec2 = DoubleConv(c2 * 2, c2)
         
         # Level 1: 256×256 → 512×512
-        self.upconv1 = nn.ConvTranspose2d(128, 64, kernel_size=2, stride=2)
-        self.dec1 = DoubleConv(128, 64)
+        self.upconv1 = nn.ConvTranspose2d(c2, c1, kernel_size=2, stride=2)
+        self.dec1 = DoubleConv(c1 * 2, c1)
         
         # ========== OUTPUT ==========
-        self.final_conv = nn.Conv2d(64, out_channels, kernel_size=1)
+        self.final_conv = nn.Conv2d(c1, out_channels, kernel_size=1)
     
     def forward(self, x):
         """
@@ -205,7 +218,7 @@ class ModelTrainer:
     """
     
     def __init__(self, model: nn.Module, device: str = 'cuda', 
-                 mixed_precision: bool = True):
+                 mixed_precision: bool = True, batch_size: int = DEFAULT_BATCH_SIZE):
         """
         Initialize trainer.
         
@@ -217,6 +230,7 @@ class ModelTrainer:
         self.model = model.to(device)
         self.device = device
         self.mixed_precision = mixed_precision
+        self.batch_size = batch_size
         
         # Loss function: MSE for regression
         self.criterion = nn.MSELoss()
@@ -234,7 +248,7 @@ class ModelTrainer:
         )
         
         # Mixed precision
-        self.scaler = GradScaler() if mixed_precision else None
+        self.scaler = amp.GradScaler("cuda") if mixed_precision else None
         
         # Training history
         self.history = {
@@ -246,6 +260,7 @@ class ModelTrainer:
         logger.info(f"Model: {self._count_parameters()} parameters")
         logger.info(f"Device: {device}")
         logger.info(f"Mixed precision: {mixed_precision}")
+        logger.info(f"Batch size target: {batch_size}")
     
     def _count_parameters(self) -> int:
         """Count model parameters"""
@@ -273,7 +288,7 @@ class ModelTrainer:
             
             if self.mixed_precision:
                 # Mixed precision: forward in FP16, loss in FP32
-                with autocast(device_type='cuda'):
+                with amp.autocast('cuda'):
                     outputs = self.model(inputs)
                     loss = self.criterion(outputs, targets)
                 
@@ -289,7 +304,7 @@ class ModelTrainer:
                 self.optimizer.step()
             
             total_loss += loss.item()
-            pbar.set_postfix({'loss': loss.item():.6f})
+            pbar.set_postfix({'loss': f'{loss.item():.6f}'})
         
         avg_loss = total_loss / len(train_loader)
         return avg_loss
@@ -316,7 +331,7 @@ class ModelTrainer:
                 outputs = self.model(inputs)
                 loss = self.criterion(outputs, targets)
                 total_loss += loss.item()
-                pbar.set_postfix({'loss': loss.item():.6f})
+                pbar.set_postfix({'loss': f'{loss.item():.6f}'})
         
         avg_loss = total_loss / len(val_loader)
         return avg_loss
@@ -341,7 +356,7 @@ class ModelTrainer:
         patience_counter = 0
         
         logger.info(f"Starting training for {epochs} epochs")
-        logger.info(f"Batch size: 32, LR: 1e-4, Device: {self.device}")
+        logger.info(f"Batch size: {self.batch_size}, LR: 1e-4, Device: {self.device}")
         
         for epoch in range(epochs):
             logger.info(f"\nEpoch [{epoch+1}/{epochs}]")
@@ -398,7 +413,7 @@ def main():
     logger.info("U-Net Training - RTX 4050 Optimized")
     logger.info("=" * 60)
     logger.info(f"Start time: {datetime.now()}")
-    logger.info(f"Estimated duration: 15 hours")
+    logger.info(f"Estimated duration: reduced for laptop RTX 4050")
     logger.info("=" * 60)
     
     # Device
@@ -406,21 +421,21 @@ def main():
     logger.info(f"Using device: {device}")
     
     # Create model
-    model = UNet(in_channels=3, out_channels=2)
+    model = UNet(in_channels=3, out_channels=2, base_channels=DEFAULT_BASE_CHANNELS)
     logger.info(f"Created U-Net model")
     
     # Create trainer
-    trainer = ModelTrainer(model, device=device, mixed_precision=True)
+    trainer = ModelTrainer(model, device=device, mixed_precision=True, batch_size=DEFAULT_BATCH_SIZE)
     
     # TODO: Load data
     # from preprocess import StressDataset
     # train_dataset = StressDataset('data/processed', split='train')
     # val_dataset = StressDataset('data/processed', split='val')
-    # train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
-    # val_loader = DataLoader(val_dataset, batch_size=32)
+    # train_loader = DataLoader(train_dataset, batch_size=DEFAULT_BATCH_SIZE, shuffle=True, num_workers=DEFAULT_NUM_WORKERS, pin_memory=(device == 'cuda'))
+    # val_loader = DataLoader(val_dataset, batch_size=DEFAULT_BATCH_SIZE, num_workers=DEFAULT_NUM_WORKERS, pin_memory=(device == 'cuda'))
     
     # TODO: Train
-    # history = trainer.train(train_loader, val_loader, epochs=100)
+    # history = trainer.train(train_loader, val_loader, epochs=DEFAULT_EPOCHS)
     
     logger.info("✅ Training script complete!")
     logger.info("Next step: python backend/main.py")
