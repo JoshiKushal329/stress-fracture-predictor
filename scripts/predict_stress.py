@@ -9,6 +9,11 @@ import torch
 from pathlib import Path
 from scripts.train import UNet
 from scripts.fea_generator_v2 import build_geometry_mask
+from scripts.config import (
+    denormalize_stress, denormalize_strain,
+    STRESS_SCALE_FACTOR, STRAIN_SCALE_FACTOR,
+    HOTSPOT_THRESHOLD, HOTSPOT_COUNT
+)
 import logging
 
 logging.basicConfig(level=logging.INFO)
@@ -105,26 +110,26 @@ def predict_stress_strain(
         output = model(input_tensor)
         # output: (1, 2, 512, 512)
         # channel 0 = stress, channel 1 = strain
-        predicted_stress = output[0, 0].cpu().numpy()
-        predicted_strain = output[0, 1].cpu().numpy()
+        predicted_stress_normalized = output[0, 0].cpu().numpy()
+        predicted_strain_normalized = output[0, 1].cpu().numpy()
     
-    # Denormalize stress to actual MPa values
-    # Model was trained on normalized stress (0-1), scale to realistic range
-    # GI yield strength ~300 MPa, max stress in training was probably ~400-500 MPa
-    stress_scale = 500.0  # Scale factor: multiply normalized output by this to get MPa
-    predicted_stress = predicted_stress * stress_scale
+    # ========== DENORMALIZATION ==========
+    # Convert from normalized (0-1) to actual MPa and strain values
+    logger.info(f"Denormalizing outputs (scale factor: {STRESS_SCALE_FACTOR:.1f} MPa)")
+    predicted_stress = denormalize_stress(predicted_stress_normalized)
+    predicted_strain = denormalize_strain(predicted_strain_normalized)
     
-    # Denormalize strain (similar approach)
-    strain_scale = 0.01  # Typical max strain
-    predicted_strain = predicted_strain * strain_scale
+    logger.info(f"✅ Denormalization complete:")
+    logger.info(f"   Stress: normalized [0-1] → actual MPa [0-{STRESS_SCALE_FACTOR:.1f}]")
+    logger.info(f"   Strain: normalized [0-1] → actual [0-{STRAIN_SCALE_FACTOR:.6f}]")
     
     return predicted_stress, predicted_strain
 
 
 def find_fracture_points(
     stress_field: np.ndarray,
-    threshold: float = 300.0,
-    top_n: int = 10
+    threshold: float = None,
+    top_n: int = None
 ) -> list:
     """
     Find high-stress regions in the predicted stress field.
@@ -137,6 +142,11 @@ def find_fracture_points(
     Returns:
         List of [(x, y, stress_value), ...] sorted by stress descending
     """
+    if threshold is None:
+        threshold = HOTSPOT_THRESHOLD
+    if top_n is None:
+        top_n = HOTSPOT_COUNT
+    
     # Find pixels above threshold
     hotspots = np.argwhere(stress_field > threshold)
     
@@ -163,7 +173,7 @@ def main():
     parser.add_argument("--load-y", type=float, default=0.0, help="Load Y component (N)")
     parser.add_argument("--load-z", type=float, default=-500.0, help="Load Z component (N)")
     parser.add_argument("--model", type=str, default="models/smoke/unet_best.pth", help="Model path")
-    parser.add_argument("--threshold", type=float, default=300.0, help="Hotspot stress threshold (MPa)")
+    parser.add_argument("--threshold", type=float, default=None, help="Hotspot stress threshold (MPa)")
     parser.add_argument("--output", type=str, default="prediction_output", help="Output dir")
     
     args = parser.parse_args()
@@ -177,14 +187,18 @@ def main():
         model_path=args.model
     )
     
-    logger.info(f"Stress range: {predicted_stress.min():.1f} - {predicted_stress.max():.1f} MPa")
-    logger.info(f"Strain range: {predicted_strain.min():.6f} - {predicted_strain.max():.6f}")
+    logger.info(f"\n{'='*70}")
+    logger.info(f"PREDICTION RESULTS (ACTUAL VALUES IN MPa)")
+    logger.info(f"{'='*70}")
+    logger.info(f"Stress range: {predicted_stress.min():.2f} - {predicted_stress.max():.2f} MPa")
+    logger.info(f"Strain range: {predicted_strain.min():.8f} - {predicted_strain.max():.8f}")
+    logger.info(f"{'='*70}\n")
     
     # Find hotspots
-    hotspots = find_fracture_points(predicted_stress, threshold=args.threshold, top_n=10)
-    logger.info(f"\nTop 10 fracture-prone regions (GI yield ~300 MPa):")
+    hotspots = find_fracture_points(predicted_stress, threshold=args.threshold, top_n=HOTSPOT_COUNT)
+    logger.info(f"Top {HOTSPOT_COUNT} fracture-prone regions (GI yield ~300 MPa):")
     for i, (x, y, stress) in enumerate(hotspots, 1):
-        logger.info(f"  {i}. Position ({x}, {y}): {stress:.1f} MPa")
+        logger.info(f"  {i}. Position ({x}, {y}): {stress:.2f} MPa")
     
     # Save outputs
     out_dir = Path(args.output)
@@ -201,6 +215,9 @@ def main():
         "yield_strength_mpa": 300,
         "load": {"x": args.load_x, "y": args.load_y, "z": args.load_z},
         "max_stress_mpa": float(predicted_stress.max()),
+        "stress_scale_factor_mpa": float(STRESS_SCALE_FACTOR),
+        "strain_scale_factor": float(STRAIN_SCALE_FACTOR),
+        "note": "All stress values are in actual MPa (denormalized)",
         "fracture_points": [
             {"x": int(x), "y": int(y), "stress_mpa": float(s)}
             for x, y, s in hotspots
@@ -214,16 +231,16 @@ def main():
         import matplotlib.pyplot as plt
         fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
         
-        # Stress heatmap
+        # Stress heatmap (in MPa)
         im1 = ax1.imshow(predicted_stress, cmap='hot', origin='lower')
         ax1.set_title(f'Stress Distribution (Max: {predicted_stress.max():.1f} MPa)', fontsize=12, fontweight='bold')
         ax1.set_xlabel('X (pixels)')
         ax1.set_ylabel('Y (pixels)')
-        plt.colorbar(im1, ax=ax1, label='Stress (MPa)')
+        cbar1 = plt.colorbar(im1, ax=ax1, label='Stress (MPa)')
         
         # Strain heatmap
         im2 = ax2.imshow(predicted_strain, cmap='viridis', origin='lower')
-        ax2.set_title(f'Strain Distribution (Max: {predicted_strain.max():.6f})', fontsize=12, fontweight='bold')
+        ax2.set_title(f'Strain Distribution (Max: {predicted_strain.max():.8f})', fontsize=12, fontweight='bold')
         ax2.set_xlabel('X (pixels)')
         ax2.set_ylabel('Y (pixels)')
         plt.colorbar(im2, ax=ax2, label='Strain')
@@ -242,9 +259,12 @@ def main():
         logger.warning(f"Could not create heatmap: {e}")
     
     logger.info(f"\nOutputs saved to {out_dir}/")
-    logger.info("  - predicted_stress.npy (512x512 stress map)")
+    logger.info("  - predicted_stress.npy (512x512 stress map in MPa)")
     logger.info("  - predicted_strain.npy (512x512 strain map)")
-    logger.info("  - hotspots.json (fracture point locations)")
+    logger.info("  - hotspots.json (fracture point locations with scale factors)")
+    logger.info(f"\n✅ Scale factors used:")
+    logger.info(f"   Stress: {STRESS_SCALE_FACTOR:.1f} MPa")
+    logger.info(f"   Strain: {STRAIN_SCALE_FACTOR:.6f}")
 
 
 if __name__ == "__main__":
