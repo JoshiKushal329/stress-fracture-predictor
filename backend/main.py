@@ -39,6 +39,13 @@ from datetime import datetime
 import asyncio
 from concurrent.futures import ThreadPoolExecutor
 
+# Import centralized configuration
+from scripts.config import (
+    denormalize_stress, denormalize_strain,
+    STRESS_SCALE_FACTOR, STRAIN_SCALE_FACTOR,
+    MATERIAL_YIELD_STRENGTH, HOTSPOT_THRESHOLD, HOTSPOT_COUNT
+)
+
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -68,6 +75,8 @@ MODEL = None
 EXECUTOR = ThreadPoolExecutor(max_workers=4)
 
 logger.info(f"Using device: {DEVICE}")
+logger.info(f"Stress scale factor: {STRESS_SCALE_FACTOR:.1f} MPa")
+logger.info(f"Strain scale factor: {STRAIN_SCALE_FACTOR:.6f}")
 
 
 # ============================================================================
@@ -311,64 +320,73 @@ def predict_stress_field(geometry_image: np.ndarray,
         load_magnitude_field: Load magnitude field
         
     Returns:
-        Predicted stress map (512×512)
+        Predicted stress map (512×512) - ACTUAL VALUES IN MPa
     """
     # Stack into 3-channel input
     input_tensor = np.stack([geometry_image, load_location, load_magnitude_field], axis=0)
     input_tensor = torch.from_numpy(input_tensor).float().unsqueeze(0).to(DEVICE)
     
     with torch.no_grad():
-        stress_map = MODEL(input_tensor)[0, 0].cpu().numpy()
+        stress_map_normalized = MODEL(input_tensor)[0, 0].cpu().numpy()
     
-    return stress_map
+    # ========== DENORMALIZATION ==========
+    # Convert from normalized (0-1) to actual MPa values
+    stress_map_mpa = denormalize_stress(stress_map_normalized)
+    
+    return stress_map_mpa
 
 
 # ============================================================================
 # ANALYSIS FUNCTIONS
 # ============================================================================
 
-def detect_hotspots(stress_map: np.ndarray, top_k: int = 5) -> List[Dict]:
+def detect_hotspots(stress_map: np.ndarray, top_k: int = None) -> List[Dict]:
     """
     Find hotspot locations (fracture points).
     
     Args:
-        stress_map: Predicted stress map
+        stress_map: Predicted stress map (actual MPa values)
         top_k: Number of hotspots to return
         
     Returns:
-        List of hotspot dictionaries
+        List of hotspot dictionaries with stress in MPa
     """
+    if top_k is None:
+        top_k = HOTSPOT_COUNT
+    
     stress_flat = stress_map.flatten()
     top_k_indices = np.argsort(stress_flat)[-top_k:][::-1]
     
     hotspots = []
     for idx in top_k_indices:
         y, x = np.unravel_index(idx, stress_map.shape)
-        stress_value = stress_map[y, x]
+        stress_value_mpa = stress_map[y, x]
         
         hotspots.append({
             'x': int(x),
             'y': int(y),
-            'stress_mpa': float(stress_value * 400),  # Scale to realistic MPa
-            'stress_normalized': float(stress_value)
+            'stress_mpa': float(stress_value_mpa),
+            'normalized': float(stress_value_mpa / STRESS_SCALE_FACTOR) if STRESS_SCALE_FACTOR > 0 else 0.0
         })
     
     return hotspots
 
 
-def determine_fracture_risk(max_stress: float, yield_strength: float = 250) -> str:
+def determine_fracture_risk(max_stress_mpa: float, yield_strength: float = None) -> str:
     """
     Classify fracture risk based on stress level.
     
     Args:
-        max_stress: Maximum stress (normalized 0-1)
+        max_stress_mpa: Maximum stress in MPa (ACTUAL VALUE)
         yield_strength: Material yield strength (MPa)
         
     Returns:
         Risk classification string
     """
-    stress_mpa = max_stress * 400
-    safety_factor = yield_strength / stress_mpa if stress_mpa > 0 else float('inf')
+    if yield_strength is None:
+        yield_strength = MATERIAL_YIELD_STRENGTH
+    
+    safety_factor = yield_strength / max_stress_mpa if max_stress_mpa > 0 else float('inf')
     
     if safety_factor < 1.0:
         return "CRITICAL"
@@ -381,25 +399,25 @@ def determine_fracture_risk(max_stress: float, yield_strength: float = 250) -> s
 
 
 def generate_recommendations(hotspots: List[Dict],
-                           geometry_params: Dict,
-                           stress_map: np.ndarray) -> List[Dict]:
+                            geometry_params: Dict,
+                            stress_map: np.ndarray) -> List[Dict]:
     """
     Generate design recommendations based on analysis.
     
     Args:
-        hotspots: Detected hotspots
+        hotspots: Detected hotspots (with stress in MPa)
         geometry_params: Extracted geometry parameters
-        stress_map: Stress map array
+        stress_map: Stress map array (MPa)
         
     Returns:
         List of recommendations
     """
     recommendations = []
     primary_hotspot = hotspots[0] if hotspots else {}
-    stress_level = primary_hotspot.get('stress_normalized', 0.5)
+    stress_mpa = primary_hotspot.get('stress_mpa', 250.0)
     
     # Recommendation 1: Fillets
-    if stress_level > 0.6:
+    if stress_mpa > 350:
         recommendations.append({
             'type': 'add_fillet',
             'priority': 'HIGH',
@@ -410,7 +428,7 @@ def generate_recommendations(hotspots: List[Dict],
         })
     
     # Recommendation 2: Thickness
-    if stress_level > 0.5:
+    if stress_mpa > 300:
         recommendations.append({
             'type': 'increase_thickness',
             'priority': 'MEDIUM',
@@ -421,7 +439,7 @@ def generate_recommendations(hotspots: List[Dict],
         })
     
     # Recommendation 3: Material upgrade
-    if stress_level > 0.7:
+    if stress_mpa > 400:
         recommendations.append({
             'type': 'material_upgrade',
             'priority': 'HIGH',
@@ -455,6 +473,9 @@ async def health_check():
         "status": "ok",
         "device": str(DEVICE),
         "model_loaded": MODEL is not None,
+        "stress_scale_factor_mpa": float(STRESS_SCALE_FACTOR),
+        "strain_scale_factor": float(STRAIN_SCALE_FACTOR),
+        "hotspot_threshold_mpa": float(HOTSPOT_THRESHOLD),
         "timestamp": datetime.now().isoformat()
     }
 
@@ -476,7 +497,7 @@ async def predict(
         load_magnitude: Load magnitude (N)
         
     Returns:
-        JSON with stress map, hotspots, recommendations
+        JSON with stress map, hotspots, recommendations (all in actual MPa)
     """
     temp_path = f"/tmp/{file.filename}"
     
@@ -501,22 +522,25 @@ async def predict(
             load_x, load_y, load_magnitude
         )
         
-        # Predict
-        stress_map = predict_stress_field(geometry_image, load_location, load_magnitude_field)
+        # Predict (returns actual MPa values)
+        stress_map_mpa = predict_stress_field(geometry_image, load_location, load_magnitude_field)
         
         # Analyze
-        hotspots = detect_hotspots(stress_map)
-        max_stress = np.max(stress_map)
-        fracture_risk = determine_fracture_risk(max_stress)
-        recommendations = generate_recommendations(hotspots, params, stress_map)
+        hotspots = detect_hotspots(stress_map_mpa)
+        max_stress_mpa = np.max(stress_map_mpa)
+        fracture_risk = determine_fracture_risk(max_stress_mpa)
+        recommendations = generate_recommendations(hotspots, params, stress_map_mpa)
+        
+        logger.info(f"✅ Prediction complete: max stress = {max_stress_mpa:.2f} MPa")
         
         return {
             "success": True,
             "geometry": params,
-            "stress_map": stress_map.tolist(),
-            "max_stress_normalized": float(max_stress),
-            "max_stress_mpa": float(max_stress * 400),
+            "stress_map": stress_map_mpa.tolist(),
+            "max_stress_mpa": float(max_stress_mpa),
+            "stress_scale_factor_used": float(STRESS_SCALE_FACTOR),
             "fracture_risk": fracture_risk,
+            "yield_strength_mpa": float(MATERIAL_YIELD_STRENGTH),
             "primary_hotspot": hotspots[0] if hotspots else None,
             "all_hotspots": hotspots,
             "recommendations": recommendations,
@@ -543,6 +567,9 @@ async def root():
     return {
         "title": "AI Stress Fracture Predictor API",
         "version": "1.0.0",
+        "stress_scale_factor_mpa": float(STRESS_SCALE_FACTOR),
+        "strain_scale_factor": float(STRAIN_SCALE_FACTOR),
+        "note": "All stress values are returned in actual MPa (denormalized)",
         "endpoints": {
             "GET /health": "Health check",
             "POST /predict": "Predict stress for CAD file",
