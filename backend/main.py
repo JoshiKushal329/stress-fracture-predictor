@@ -162,6 +162,7 @@ def extract_geometry_parameters(stl_file_path: str) -> Dict[str, float]:
         surface_area = mesh.area
         
         return {
+            'bounds': bounds.tolist(),
             'width': float(width),
             'height': float(height),
             'thickness': float(thickness),
@@ -253,8 +254,8 @@ def encode_load_as_channels(load_x: int, load_y: int,
     sigma = 30  # Blur radius
     load_location = np.exp(-((x - load_x)**2 + (y - load_y)**2) / (2 * sigma**2)).astype(np.float32)
     
-    # Channel 2: Uniform field with magnitude
-    load_mag_normalized = min(load_magnitude / 1000.0, 1.0)
+    # Channel 2: Uniform field with magnitude (supports -1.0 to 1.0)
+    load_mag_normalized = max(-1.0, min(load_magnitude / 10000.0, 1.0))
     load_magnitude_field = np.ones((resolution, resolution), dtype=np.float32) * load_mag_normalized
     
     return load_location, load_magnitude_field
@@ -340,16 +341,17 @@ def predict_stress_field(geometry_image: np.ndarray,
 # ANALYSIS FUNCTIONS
 # ============================================================================
 
-def detect_hotspots(stress_map: np.ndarray, top_k: int = None) -> List[Dict]:
+def detect_hotspots(stress_map: np.ndarray, top_k: int = None, geometry_params: Dict = None) -> List[Dict]:
     """
     Find hotspot locations (fracture points).
     
     Args:
         stress_map: Predicted stress map (actual MPa values)
         top_k: Number of hotspots to return
+        geometry_params: Parameters including physical bounds if available
         
     Returns:
-        List of hotspot dictionaries with stress in MPa
+        List of hotspot dictionaries with stress in MPa and 3D coords
     """
     if top_k is None:
         top_k = HOTSPOT_COUNT
@@ -362,9 +364,23 @@ def detect_hotspots(stress_map: np.ndarray, top_k: int = None) -> List[Dict]:
         y, x = np.unravel_index(idx, stress_map.shape)
         stress_value_mpa = stress_map[y, x]
         
+        # Default Z constraint if not available
+        x_3d = 0.0; y_3d = 0.0; z_3d = 0.0
+        
+        if geometry_params and 'bounds' in geometry_params:
+            bounds = geometry_params['bounds']
+            w = bounds[1][0] - bounds[0][0]
+            h = bounds[1][1] - bounds[0][1]
+            x_3d = bounds[0][0] + (float(x) / 511.0) * w
+            y_3d = bounds[0][1] + (float(y) / 511.0) * h
+            z_3d = bounds[1][2] # approximate top face Z
+            
         hotspots.append({
             'x': int(x),
             'y': int(y),
+            'x_3d': float(x_3d),
+            'y_3d': float(y_3d),
+            'z_3d': float(z_3d),
             'stress_mpa': float(stress_value_mpa),
             'normalized': float(stress_value_mpa / STRESS_SCALE_FACTOR) if STRESS_SCALE_FACTOR > 0 else 0.0
         })
@@ -526,7 +542,7 @@ async def predict(
         stress_map_mpa = predict_stress_field(geometry_image, load_location, load_magnitude_field)
         
         # Analyze
-        hotspots = detect_hotspots(stress_map_mpa)
+        hotspots = detect_hotspots(stress_map_mpa, geometry_params=params)
         max_stress_mpa = np.max(stress_map_mpa)
         fracture_risk = determine_fracture_risk(max_stress_mpa)
         recommendations = generate_recommendations(hotspots, params, stress_map_mpa)

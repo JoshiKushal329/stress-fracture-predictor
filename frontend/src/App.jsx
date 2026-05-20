@@ -19,12 +19,12 @@ export default function App() {
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  
+
   // Parameter state (what user can control)
   const [loadX, setLoadX] = useState(256);
   const [loadY, setLoadY] = useState(256);
   const [loadMagnitude, setLoadMagnitude] = useState(500);
-  
+
   // Results state
   const [result, setResult] = useState(null);
   const [selectedMaterial, setSelectedMaterial] = useState('ASTM_A36');
@@ -45,7 +45,7 @@ export default function App() {
    */
   const handlePredictClick = async (e) => {
     e.preventDefault();
-    
+
     if (!file) {
       setError('Please select a CAD file');
       return;
@@ -82,7 +82,7 @@ export default function App() {
    */
   const createStressImage = (stressArray) => {
     if (!stressArray) return null;
-    
+
     const canvas = document.createElement('canvas');
     canvas.width = 512;
     canvas.height = 512;
@@ -93,12 +93,12 @@ export default function App() {
     // Flatten and normalize stress values
     const flat = stressArray.flat();
     const maxStress = Math.max(...flat);
-    
+
     // Color mapping: Blue (low) -> Red (high)
     for (let i = 0; i < flat.length; i++) {
       const normalized = flat[i] / maxStress;
       const idx = i * 4;
-      
+
       // Red channel: increases with stress
       data[idx] = Math.min(255, normalized * 255 * 2);
       // Green: neutral
@@ -131,7 +131,7 @@ export default function App() {
    * Get risk badge color class
    */
   const getRiskColorClass = (risk) => {
-    switch(risk) {
+    switch (risk) {
       case 'CRITICAL': return 'risk-critical';
       case 'HIGH': return 'risk-high';
       case 'MEDIUM': return 'risk-medium';
@@ -173,9 +173,9 @@ export default function App() {
           {/* Parameters Section */}
           <div className="panel-section">
             <h2>⚙️ Parameters</h2>
-            
+
             <div className="parameter-control">
-              <label>Load Position X: {loadX}px</label>
+              <label>X position: {loadX}px</label>
               <input
                 type="range"
                 min="0"
@@ -187,7 +187,7 @@ export default function App() {
             </div>
 
             <div className="parameter-control">
-              <label>Load Position Y: {loadY}px</label>
+              <label>Y position: {loadY}px</label>
               <input
                 type="range"
                 min="0"

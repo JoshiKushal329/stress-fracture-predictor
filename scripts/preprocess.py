@@ -25,7 +25,7 @@ class StressDataset(Dataset):
         load_x = float(data["load_x"])
         load_y = float(data["load_y"])
         heat = np.exp(-((x - load_x)**2 + (y - load_y)**2) / (2*sigma**2)).astype(np.float32)
-        mag_field = np.ones_like(geom, dtype=np.float32) * min(float(data["load_magnitude"]) / 1000.0, 1.0)
+        mag_field = np.ones_like(geom, dtype=np.float32) * min(float(data["load_magnitude"]) / 10000.0, 1.0)
 
         input_tensor = np.stack([geom, heat, mag_field], axis=0)
         target = np.stack([data["stress"].astype(np.float32), data["strain"].astype(np.float32)], axis=0)

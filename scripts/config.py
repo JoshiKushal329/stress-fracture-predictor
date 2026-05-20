@@ -38,7 +38,7 @@ RESOLUTION = 512  # Input/output image resolution
 
 # Load encoding parameters
 LOAD_GAUSSIAN_SIGMA = 8.0  # pixels - concentration of load point
-LOAD_MAGNITUDE_MAX = 1000.0  # N - maximum load for normalization in backend
+LOAD_MAGNITUDE_MAX = 10000.0  # N - maximum load for normalization in backend
 
 # ============================================================================
 # GEOMETRY PROCESSING

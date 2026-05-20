@@ -1,0 +1,72 @@
+{
+  "material": "Galvanized Iron (GI)",
+  "young_modulus_mpa": 200000,
+  "yield_strength_mpa": 300,
+  "load": {
+    "x": 37.5,
+    "y": 470.0,
+    "z": 8000.0
+  },
+  "max_stress_mpa": 637.7869873046875,
+  "stress_scale_factor_mpa": 500.0,
+  "strain_scale_factor": 0.01,
+  "note": "All stress values are in actual MPa (denormalized)",
+  "fracture_points": [
+    {
+      "x": 496,
+      "y": 510,
+      "stress_mpa": 637.7869873046875
+    },
+    {
+      "x": 509,
+      "y": 508,
+      "stress_mpa": 634.6626586914062
+    },
+    {
+      "x": 497,
+      "y": 510,
+      "stress_mpa": 630.2512817382812
+    },
+    {
+      "x": 503,
+      "y": 507,
+      "stress_mpa": 612.0313110351562
+    },
+    {
+      "x": 494,
+      "y": 510,
+      "stress_mpa": 604.5338745117188
+    },
+    {
+      "x": 498,
+      "y": 510,
+      "stress_mpa": 589.0783081054688
+    },
+    {
+      "x": 509,
+      "y": 510,
+      "stress_mpa": 571.794921875
+    },
+    {
+      "x": 505,
+      "y": 510,
+      "stress_mpa": 563.670654296875
+    },
+    {
+      "x": 505,
+      "y": 507,
+      "stress_mpa": 559.5681762695312
+    },
+    {
+      "x": 495,
+      "y": 510,
+      "stress_mpa": 559.3637084960938
+    }
+  ],
+  "design_recommendation": {
+    "material_recommendation": "Consider Advanced High-Strength Steel or Titanium Alloy",
+    "dimension_modification": "Increase local thickness/width at hotspot (X:496.0, Y:510.0) by ~175% to handle over-stress safely.",
+    "structural_feature": "Add a vertical rib spanning the hotspot to reduce localized bending stress.",
+    "safety_factor": 0.39
+  }
+}

@@ -76,8 +76,10 @@ def predict_stress_strain(
     geometry_mask = build_geometry_mask(node_coords_by_id, bounds, resolution=512)  # 512x512
     
     # Create load location heatmap (Gaussian around point for concentrated load)
-    load_mag = np.sqrt(load_x**2 + load_y**2 + load_z**2)
-    load_mag = max(load_mag, 1e-8)
+    # Preserve the sign based on the dominant axis (e.g., Z for compression/tension)
+    dominant_load = load_z if abs(load_z) >= abs(load_x) and abs(load_z) >= abs(load_y) else (load_y if abs(load_y) >= abs(load_x) else load_x)
+    sign = np.sign(dominant_load) if dominant_load != 0 else 1.0
+    load_mag = np.sqrt(load_x**2 + load_y**2 + load_z**2) * sign
     
     # Map load location to pixel coordinates
     min_xy = bounds[0, :2]
@@ -93,7 +95,7 @@ def predict_stress_strain(
     heat = np.exp(-((x_coords - load_px)**2 + (y_coords - load_py)**2) / (2 * sigma**2)).astype(np.float32)
     
     # Create magnitude field (matching preprocess.py)
-    mag_val = min(load_mag / 1000.0, 1.0)
+    mag_val = max(min(load_mag / 10000.0, 1.0), -1.0)
     mag_field = np.ones_like(geometry_mask, dtype=np.float32) * mag_val
     
     logger.info(f"Applying LOAD at ({load_x:.1f}, {load_y:.1f}) with magnitude {load_mag:.1f}N")
@@ -149,21 +151,23 @@ def find_fracture_points(
     if top_n is None:
         top_n = HOTSPOT_COUNT
     
-    # Find pixels above threshold
-    hotspots = np.argwhere(stress_field > threshold)
+    # Find pixels with magnitude above threshold
+    abs_stress = np.abs(stress_field)
+    hotspots = np.argwhere(abs_stress > threshold)
     
     if len(hotspots) == 0:
-        logger.warning(f"No stress points above {threshold} MPa found")
+        logger.warning(f"No stress points with magnitude above {threshold} MPa found")
         # Return top N absolute peaks instead
-        flat_idx = np.argsort(stress_field.flatten())[-top_n:]
-        y_coords, x_coords = np.unravel_index(flat_idx, stress_field.shape)
-        hotspots = list(zip(x_coords, y_coords))
+        flat_idx = np.argsort(abs_stress.flatten())[-top_n:]
+        y_coords, x_coords = np.unravel_index(flat_idx, abs_stress.shape)
+        hotspots = list(zip(y_coords, x_coords))
     else:
-        # Sort by stress value
-        stresses = [stress_field[y, x] for y, x in hotspots]
-        sorted_pairs = sorted(zip(hotspots, stresses), key=lambda p: p[1], reverse=True)
-        hotspots = [p[0] for p in sorted_pairs[:top_n]]
-    
+        # Sort by absolute stress magnitude
+        stresses = [abs_stress[y, x] for y, x in hotspots]
+        sorted_indices = np.argsort(stresses)[::-1][:top_n]
+        # Re-pack correctly using the original sign's stress value
+        hotspots = [hotspots[i] for i in sorted_indices]
+        
     result = [(x, y, stress_field[y, x]) for y, x in hotspots]
     return result
 

@@ -49,7 +49,7 @@ def make_stress_map(geom_mask, load_x_px, load_y_px, load_mag, res=512):
     y, x = np.ogrid[:res, :res]
     sigma = max(8, int(res * 0.05))
     g = np.exp(-((x - load_x_px)**2 + (y - load_y_px)**2) / (2*sigma*sigma))
-    stress = g * (load_mag / 1000.0)
+    stress = g * (load_mag / 10000.0)
     stress = stress * geom_mask
     # normalize to 0..1
     if stress.max() > 0:
@@ -76,8 +76,8 @@ def main():
     for i in range(args.n):
         load_x = np.random.uniform(0.15, 0.85) * res
         load_y = np.random.uniform(0.15, 0.85) * res
-        load_mag = np.random.uniform(100, 1000)
-        stress, strain = make_stress_map(geom, int(load_x), int(load_y), load_mag, res)
+        load_mag = np.random.uniform(-10000, 10000)
+        stress, strain = make_stress_map(geom, int(load_x), int(load_y), abs(load_mag), res)
         sample_file = outdir / f"sample_{i:04d}.npz"
         np.savez(sample_file,
                  geometry=geom.astype(np.float32),

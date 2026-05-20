@@ -348,7 +348,7 @@ class DataGenerator:
             'thickness': np.random.uniform(3, 10),        # mm
             'fillet_radius': np.random.uniform(0.5, 5),   # mm
             'hole_diameter': np.random.uniform(8, 16),    # mm
-            'load_magnitude': np.random.uniform(100, 1000),  # N
+            'load_magnitude': np.random.uniform(100, 10000),  # N
             'load_x': np.random.uniform(50, 200),         # mm
             'load_y': np.random.uniform(50, 250),         # mm
             'material': 'Steel_ASTM_A36',
