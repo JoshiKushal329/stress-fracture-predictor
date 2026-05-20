@@ -4,11 +4,18 @@ Inference script: predict stress/strain on GI geometry given a load.
 Usage: python scripts/predict_stress.py --geometry data/geometry/vertical_support.stl --load-x 0 --load-y 0 --load-z -500
 """
 import argparse
+import sys
 import numpy as np
 import torch
 from pathlib import Path
+
+# Add project root to sys.path so 'scripts.*' imports work from anywhere
+project_root = Path(__file__).resolve().parent.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
 from scripts.train import UNet
-from scripts.fea_generator_v2 import build_geometry_mask
+from scripts.fea_generator_v2 import build_geometry_mask, generate_design_recommendation
 from scripts.config import (
     denormalize_stress, denormalize_strain,
     STRESS_SCALE_FACTOR, STRAIN_SCALE_FACTOR,
@@ -38,7 +45,7 @@ def predict_stress_strain(
         device: Compute device ('cuda' or 'cpu')
     
     Returns:
-        (predicted_stress, predicted_strain): 512x512 numpy arrays (MPa, unitless)
+        (predicted_stress, predicted_strain, points, bounds): stress/strain arrays, mesh points, and bounds
     """
     # Resolve model path relative to script location if it's relative
     model_path = Path(model_path)
@@ -71,8 +78,6 @@ def predict_stress_strain(
     # Create load location heatmap (Gaussian around point for concentrated load)
     load_mag = np.sqrt(load_x**2 + load_y**2 + load_z**2)
     load_mag = max(load_mag, 1e-8)
-    load_x_norm = load_x / load_mag
-    load_y_norm = load_y / load_mag
     
     # Map load location to pixel coordinates
     min_xy = bounds[0, :2]
@@ -82,25 +87,22 @@ def predict_stress_strain(
     load_px = ((load_x - min_xy[0]) / width) * 511
     load_py = ((load_y - min_xy[1]) / height) * 511
     
-    # Create concentrated Gaussian heatmap around load point (tighter sigma for point concentration)
+    # Create concentrated Gaussian heatmap around load point (matching preprocess.py)
     y_coords, x_coords = np.ogrid[:512, :512]
-    sigma = 8.0  # Tighter Gaussian for concentrated load
+    sigma = 30.0  # Match training script sigma=30
     heat = np.exp(-((x_coords - load_px)**2 + (y_coords - load_py)**2) / (2 * sigma**2)).astype(np.float32)
     
-    # Normalize and apply load direction
-    if heat.max() > 0:
-        heat = heat / heat.max()
+    # Create magnitude field (matching preprocess.py)
+    mag_val = min(load_mag / 1000.0, 1.0)
+    mag_field = np.ones_like(geometry_mask, dtype=np.float32) * mag_val
     
-    # Create direction maps
-    load_x_map = heat * load_x_norm
-    load_y_map = heat * load_y_norm
-    logger.info(f"Applying CONCENTRATED LOAD at ({load_x:.1f}, {load_y:.1f}) with sigma={sigma} pixels")
+    logger.info(f"Applying LOAD at ({load_x:.1f}, {load_y:.1f}) with magnitude {load_mag:.1f}N")
     
     # Stack into 3-channel input
     input_tensor = torch.stack([
         torch.from_numpy(geometry_mask).float(),
-        torch.from_numpy(load_x_map).float(),
-        torch.from_numpy(load_y_map).float()
+        torch.from_numpy(heat).float(),
+        torch.from_numpy(mag_field).float()
     ], dim=0).unsqueeze(0).to(device)  # (1, 3, 512, 512)
     
     logger.info(f"Predicting stress/strain for load: ({load_x:.1f}, {load_y:.1f}, {load_z:.1f}) N")
@@ -123,7 +125,7 @@ def predict_stress_strain(
     logger.info(f"   Stress: normalized [0-1] → actual MPa [0-{STRESS_SCALE_FACTOR:.1f}]")
     logger.info(f"   Strain: normalized [0-1] → actual [0-{STRAIN_SCALE_FACTOR:.6f}]")
     
-    return predicted_stress, predicted_strain
+    return predicted_stress, predicted_strain, points, bounds
 
 
 def find_fracture_points(
@@ -169,17 +171,33 @@ def find_fracture_points(
 def main():
     parser = argparse.ArgumentParser(description="Predict stress/strain on GI part")
     parser.add_argument("--geometry", type=str, required=True, help="STL file path")
-    parser.add_argument("--load-x", type=float, default=0.0, help="Load X component (N)")
-    parser.add_argument("--load-y", type=float, default=0.0, help="Load Y component (N)")
-    parser.add_argument("--load-z", type=float, default=-500.0, help="Load Z component (N)")
+    parser.add_argument("--load-x", type=float, help="Load X location (mm)")
+    parser.add_argument("--load-y", type=float, help="Load Y location (mm)")
+    parser.add_argument("--load-z", type=float, help="Load Z component (N)")
     parser.add_argument("--model", type=str, default="models/smoke/unet_best.pth", help="Model path")
     parser.add_argument("--threshold", type=float, default=None, help="Hotspot stress threshold (MPa)")
     parser.add_argument("--output", type=str, default="prediction_output", help="Output dir")
-    
+    parser.add_argument("--name", type=str, default="prediction", help="Name prefix for output files")
+
     args = parser.parse_args()
+
+    # If load-x, load-y, or load-z are not provided, prompt user interactively for them based on geometry bounds
+    if args.load_x is None or args.load_y is None or args.load_z is None:
+        import meshio
+        mesh = meshio.read(args.geometry)
+        points = mesh.points
+        min_x, min_y = points[:,0].min(), points[:,1].min()
+        max_x, max_y = points[:,0].max(), points[:,1].max()
+        print(f"Part bounding box: X=[{min_x:.1f}, {max_x:.1f}], Y=[{min_y:.1f}, {max_y:.1f}]")
+        if args.load_x is None:
+            args.load_x = float(input(f"Enter X location for load (in mm, {min_x:.1f} to {max_x:.1f}): ").strip())
+        if args.load_y is None:
+            args.load_y = float(input(f"Enter Y location for load (in mm, {min_y:.1f} to {max_y:.1f}): ").strip())
+        if args.load_z is None:
+            args.load_z = float(input(f"Enter Z load magnitude in Newtons (e.g. -500.0 for downward force): ").strip())
     
     # Run prediction
-    predicted_stress, predicted_strain = predict_stress_strain(
+    predicted_stress, predicted_strain, points, bounds = predict_stress_strain(
         geometry_stl=args.geometry,
         load_x=args.load_x,
         load_y=args.load_y,
@@ -199,13 +217,30 @@ def main():
     logger.info(f"Top {HOTSPOT_COUNT} fracture-prone regions (GI yield ~300 MPa):")
     for i, (x, y, stress) in enumerate(hotspots, 1):
         logger.info(f"  {i}. Position ({x}, {y}): {stress:.2f} MPa")
+
+    # Design recommendation based on dominant hotspot and max stress
+    if hotspots:
+        dom_hotspot = hotspots[0]
+        recommendation = generate_design_recommendation(
+            load_x=args.load_x,
+            load_y=args.load_y,
+            hotspot_xy=(dom_hotspot[0], dom_hotspot[1]),
+            bounds=bounds,
+            max_stress=float(predicted_stress.max())
+        )
+        logger.info("\n=== DESIGN RECOMMENDATION ===")
+        for k, v in recommendation.items():
+            logger.info(f"{k.replace('_', ' ').capitalize()}: {v}")
+    else:
+        recommendation = None
     
     # Save outputs
     out_dir = Path(args.output)
     out_dir.mkdir(parents=True, exist_ok=True)
+    name_prefix = args.name
     
-    np.save(out_dir / "predicted_stress.npy", predicted_stress)
-    np.save(out_dir / "predicted_strain.npy", predicted_strain)
+    np.save(out_dir / f"{name_prefix}_predicted_stress.npy", predicted_stress)
+    np.save(out_dir / f"{name_prefix}_predicted_strain.npy", predicted_strain)
     
     # Save hotspots to JSON
     import json
@@ -221,47 +256,61 @@ def main():
         "fracture_points": [
             {"x": int(x), "y": int(y), "stress_mpa": float(s)}
             for x, y, s in hotspots
-        ]
+        ],
+        "design_recommendation": recommendation
     }
-    with open(out_dir / "hotspots.json", "w") as f:
+    with open(out_dir / f"{name_prefix}_hotspots.json", "w") as f:
         json.dump(hotspot_data, f, indent=2)
     
     # Create and save heatmap visualization
     try:
         import matplotlib.pyplot as plt
+        # Recompute geometry mask for overlay
+        import meshio
+        mesh = meshio.read(args.geometry)
+        points = mesh.points
+        node_coords_by_id = {i + 1: list(pt) for i, pt in enumerate(points)}
+        min_xyz = points.min(axis=0)
+        max_xyz = points.max(axis=0)
+        bounds = np.array([min_xyz, max_xyz])
+        geometry_mask = build_geometry_mask(node_coords_by_id, bounds, resolution=512)
+
         fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
-        
-        # Stress heatmap (in MPa)
+
+        # Stress heatmap (in MPa) with geometry overlay
         im1 = ax1.imshow(predicted_stress, cmap='hot', origin='lower')
+        # Overlay geometry mask as a semi-transparent contour
+        ax1.imshow(geometry_mask, cmap='gray', alpha=0.25, origin='lower')
         ax1.set_title(f'Stress Distribution (Max: {predicted_stress.max():.1f} MPa)', fontsize=12, fontweight='bold')
         ax1.set_xlabel('X (pixels)')
         ax1.set_ylabel('Y (pixels)')
         cbar1 = plt.colorbar(im1, ax=ax1, label='Stress (MPa)')
-        
-        # Strain heatmap
-        im2 = ax2.imshow(predicted_strain, cmap='viridis', origin='lower')
-        ax2.set_title(f'Strain Distribution (Max: {predicted_strain.max():.8f})', fontsize=12, fontweight='bold')
-        ax2.set_xlabel('X (pixels)')
-        ax2.set_ylabel('Y (pixels)')
-        plt.colorbar(im2, ax=ax2, label='Strain')
-        
+
         # Mark hotspots on stress heatmap
         for i, (x, y, s) in enumerate(hotspots[:5], 1):
             ax1.plot(x, y, 'co', markersize=8, markerfacecolor='none', markeredgewidth=2)
             ax1.text(x, y-20, f'{i}', color='cyan', fontsize=10, fontweight='bold')
-        
+
+        # Strain heatmap
+        im2 = ax2.imshow(predicted_strain, cmap='viridis', origin='lower')
+        ax2.imshow(geometry_mask, cmap='gray', alpha=0.25, origin='lower')
+        ax2.set_title(f'Strain Distribution (Max: {predicted_strain.max():.8f})', fontsize=12, fontweight='bold')
+        ax2.set_xlabel('X (pixels)')
+        ax2.set_ylabel('Y (pixels)')
+        plt.colorbar(im2, ax=ax2, label='Strain')
+
         plt.tight_layout()
-        heatmap_path = out_dir / "stress_strain_heatmap.png"
+        heatmap_path = out_dir / f"{name_prefix}_stress_strain_heatmap.png"
         plt.savefig(heatmap_path, dpi=150, bbox_inches='tight')
         logger.info(f"Heatmap saved to {heatmap_path}")
         plt.close()
     except Exception as e:
         logger.warning(f"Could not create heatmap: {e}")
     
-    logger.info(f"\nOutputs saved to {out_dir}/")
-    logger.info("  - predicted_stress.npy (512x512 stress map in MPa)")
-    logger.info("  - predicted_strain.npy (512x512 strain map)")
-    logger.info("  - hotspots.json (fracture point locations with scale factors)")
+    logger.info(f"\nOutputs saved to {out_dir}/ with prefix '{name_prefix}_'")
+    logger.info(f"  - {name_prefix}_predicted_stress.npy (512x512 stress map in MPa)")
+    logger.info(f"  - {name_prefix}_predicted_strain.npy (512x512 strain map)")
+    logger.info(f"  - {name_prefix}_hotspots.json (fracture point locations with scale factors)")
     logger.info(f"\n✅ Scale factors used:")
     logger.info(f"   Stress: {STRESS_SCALE_FACTOR:.1f} MPa")
     logger.info(f"   Strain: {STRAIN_SCALE_FACTOR:.6f}")
