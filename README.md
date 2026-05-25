@@ -1,162 +1,180 @@
-  # Stress Fracture Predictor
+# AI Stress Fracture Predictor
 
-An end-to-end prototype for **predicting stress hotspots / fracture risk** from a CAD part + load inputs using a neural network surrogate model (U-Net style), exposed via a **FastAPI backend** and intended to be used from a **frontend UI**.
+A full-stack AI engineering project for fast structural risk estimation from CAD geometry and load inputs.
 
-This project is structured like a small full-stack ML app:
-- **Backend (Python / FastAPI):** accepts CAD files + load parameters, runs inference, returns stress map + hotspot analysis + recommendations
-- **Models:** saved model weights (expected by the backend)
-- **Frontend (JavaScript):** UI code (in `frontend/`)
-- **Data / scripts / prediction folders:** training/inference utilities and outputs
+The system uses a neural surrogate model to estimate stress distribution, detect fracture hotspots, classify risk, and return design recommendations through a FastAPI backend, with a React frontend for interactive usage.
 
-> For detailed inference input/output format and interpretation, see: `INFERENCE_GUIDE.md`.
+---
+
+## Project Status
+
+✅ **Working MVP**
+
+- Backend API is implemented and runnable
+- Core inference flow is implemented end-to-end
+- Material database and health endpoints are available
+- Frontend UI source is included (`frontend/src`)
+
+---
+
+## Key Capabilities
+
+- Upload CAD files (`.stl`, `.step`, `.stp`) for analysis
+- Predict 2D stress maps (512 × 512)
+- Detect and rank stress hotspots
+- Classify fracture risk (`LOW`, `MEDIUM`, `HIGH`, `CRITICAL`)
+- Generate engineering recommendations
+- Export prediction results as JSON (frontend)
+
+---
+
+## System Architecture
+
+- **Backend:** FastAPI + PyTorch (`backend/main.py`)
+- **Model Runtime:** U-Net-style surrogate loaded from `models/unet_best.pth`
+- **Geometry Processing:** `trimesh` projection/rasterization pipeline
+- **Shared Scripts:** preprocessing, training, and utility scripts in `scripts/`
+- **Frontend:** React-based app in `frontend/src/App.jsx`
 
 ---
 
 ## Repository Structure
 
-- `backend/` – FastAPI server (`backend/main.py`)
-- `frontend/` – frontend app source (currently contains `src/`)
-- `models/` – model weights (backend expects a file like `models/unet_best.pth`)
-- `scripts/` – shared config/training/inference utilities (imported by backend)
-- `data/` – datasets / samples
-- `prediction_1/`, `prediction_2/`, `prediction_output/`, `custom_predictions/`, `test_folder/` – experiments and outputs
-- `INFERENCE_GUIDE.md` – step-by-step inference guide and interpretation notes
+- `backend/` — FastAPI server
+- `frontend/` — frontend source files
+- `models/` — trained model weights
+- `scripts/` — training, preprocessing, prediction, FEA/data tools
+- `data/` — datasets/sample data
+- `INFERENCE_GUIDE.md` — model inference and interpretation notes
 
 ---
 
-## What the Backend Does
+## Startup Guide
 
-The backend (`backend/main.py`) exposes a **Stress Fracture Predictor API** that:
+### 1) Prerequisites
 
-1. Accepts a CAD file upload (STL/STEP) + load parameters
-2. Extracts basic geometry parameters and validates they’re in expected ranges
-3. Rasterizes the geometry into a **512×512** representation
-4. Encodes the load into input channels
-5. Runs model inference to predict a **stress map**
-6. Detects **hotspots** (top high-stress points)
-7. Computes an approximate **fracture risk** classification
-8. Returns recommendations (e.g., add fillet, increase thickness, material upgrade)
+- Python 3.10+ recommended
+- `pip`
+- (Optional) Node.js 18+ and npm for frontend app setup
 
 ---
 
-## API Endpoints (Backend)
+### 2) Clone and enter project
 
-From the header comment and implementation in `backend/main.py`:
-
-- `GET /health` – health check and model/device info  
-- `POST /predict` – upload a part + load parameters and get stress + hotspots  
-- `GET /material_db` – material property database  
-- `GET /` – quick API overview (and points to `/docs`)
-
-FastAPI interactive docs:
-- `/docs`
+```bash
+git clone <your-repo-url>
+cd stress-fracture-predictor
+```
 
 ---
 
-## Quickstart (Backend)
-
-### 1) Create and activate a virtual environment
+### 3) Set up Python environment
 
 ```bash
 python -m venv .venv
-# macOS/Linux:
 source .venv/bin/activate
-# Windows (PowerShell):
-# .venv\Scripts\Activate.ps1
+# Windows PowerShell: .venv\Scripts\Activate.ps1
 ```
 
-### 2) Install dependencies
-
-This repo may not include a pinned `requirements.txt` yet. At minimum the backend uses:
-- `fastapi`, `uvicorn`
-- `torch`
-- `numpy`, `Pillow`
-- `trimesh`
-
-Example install:
+Install backend dependencies:
 
 ```bash
-pip install fastapi uvicorn torch numpy pillow trimesh
+pip install fastapi uvicorn torch numpy pillow trimesh python-multipart
 ```
 
-### 3) Ensure model weights exist
+---
 
-Backend startup tries to load:
+### 4) Add model weights
 
-- `models/unet_best.pth`
+Place trained model weights at:
 
-Make sure that file exists, otherwise the API will fail to fully initialize for inference.
+```text
+models/unet_best.pth
+```
 
-### 4) Run the backend
+> The backend starts even if loading fails, but inference requires the model to be loaded successfully.
+
+---
+
+### 5) Run backend API
 
 ```bash
 python backend/main.py
 ```
 
-By default it runs on:
-- `http://0.0.0.0:8000`
-- Docs: `http://localhost:8000/docs`
+API will be available at:
+
+- `http://localhost:8000`
+- Swagger docs: `http://localhost:8000/docs`
 
 ---
 
-## Example Request (Predict)
+### 6) Verify backend health
 
-`POST /predict` accepts:
-- `file`: CAD file upload
-- `load_x` (default `256`)
-- `load_y` (default `256`)
-- `load_magnitude` (default `500.0` Newtons)
+```bash
+curl http://localhost:8000/health
+```
 
-Example with `curl`:
+You should see `"status": "ok"` and model/device metadata.
+
+---
+
+### 7) Run a prediction request
 
 ```bash
 curl -X POST "http://localhost:8000/predict?load_x=256&load_y=256&load_magnitude=500" \
   -H "accept: application/json" \
   -H "Content-Type: multipart/form-data" \
-  -F "file=@your_part.stl"
+  -F "file=@/absolute/path/to/your_part.stl"
 ```
 
 Response includes:
-- `stress_map` (512×512 array)
+
+- `stress_map`
 - `max_stress_mpa`
 - `fracture_risk`
 - `all_hotspots`
 - `recommendations`
 
-> Note: The backend is designed to return **stress in MPa** (denormalized).
+---
+
+## Frontend Usage
+
+The repository currently includes frontend source code (`frontend/src`) but no package manifest (`package.json`) in the current tree.
+
+To run the UI locally, initialize or restore the frontend project config (for example with Vite/React), then point requests to:
+
+- `http://localhost:8000/predict`
 
 ---
 
-## Frontend
+## API Endpoints (Current)
 
-Frontend code lives in `frontend/` (currently shows `frontend/src`). If you have (or plan to add) a `package.json`, typical commands will look like:
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-If you want, tell me what framework you used (React/Vite/Next/etc.) and I’ll tailor the exact frontend run instructions.
+- `GET /` — API summary
+- `GET /health` — runtime health + model info
+- `POST /predict` — CAD upload + stress prediction
+- `GET /material_db` — available material properties
 
 ---
 
-## Notes / Caveats
+## Known Limitations
 
-- The current `backend/main.py` includes a `create_unet()` placeholder implementation. For real results, you’ll want to ensure the architecture matches the weights saved in `models/unet_best.pth`.
-- Geometry rasterization is currently a simple projection-based approach; accuracy depends heavily on consistent preprocessing/training.
-
----
-
-## License
-
-Add a license if you plan to share or reuse this project (e.g., MIT).
+- Current U-Net architecture in backend is a simplified placeholder and must match training architecture for production-quality predictions
+- Geometry rasterization is projection-based and may not capture full 3D stress behavior
+- Accuracy depends on quality and coverage of training data
 
 ---
 
-## Contributing
+## Next Steps to Productionize
 
-Issues and PRs welcome. If you open a PR, please include:
-- what changed
-- how to run/test it locally
-- example input + expected output (screenshots or JSON snippets if possible)
+- Version and pin dependencies with `requirements.txt`
+- Add automated tests for API and inference paths
+- Add frontend build configuration and deployment scripts
+- Introduce model/version metadata and model registry checks
+- Add CI for lint/test/build and release packaging
+
+---
+
+## Additional Documentation
+
+- See `INFERENCE_GUIDE.md` for model input/output interpretation details.
